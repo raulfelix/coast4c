@@ -1,0 +1,54 @@
+// 620px
+@media all and (max-width: 700px) {
+
+  // grid
+  .f-row {
+    padding: 0 rem(5);
+    & > div {
+      padding: 0 rem(5);
+    }
+  }
+
+  .bp2-1 {
+    width: 100%;
+  }
+  .bp1-1-2 {
+    width: 50%;
+  }
+
+  .bp1-1 {
+    width: 100%;
+  }
+
+  .bp1-pull-left {
+    float: left;
+  }
+  .bp1-pull-right {
+    float: right;
+  }
+  
+
+  // subscribe
+  .form-subscribe {
+    margin-top: rem(50);
+    margin-bottom: rem(50);
+    
+    .input {
+      margin-right: 0;
+    }
+
+    .button {
+      float: none;
+      margin-top: rem(10);
+    }
+  }
+
+  @import 'module_thumb_bp1';
+  @import 'module_modal_bp1';
+}
+
+@media all and (max-height: 500px) {
+  .footer-fixed {
+    position: relative;
+  }
+}

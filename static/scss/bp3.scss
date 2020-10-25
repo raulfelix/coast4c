@@ -1,0 +1,44 @@
+@media all and (max-width: 48em) { 
+  
+  //assembly
+  .sly-controls,
+  .header-carousel-controls { 
+    display: none;
+  }
+
+
+  .header-content,
+  .footer-next .footer-next-content {
+    width: 100%;
+  }
+  //carousel
+  .header-carousel .rsBullets {
+    bottom: rem(20);
+  }
+
+  .header-carousel .rsBullets .rsBullet {
+    margin: 0 8px;
+    display: inline-block;
+  }
+
+  // modal
+  .modal-share-actions .button {
+    margin: 0 1px;
+  }
+
+
+  // button
+  .button-gallery span {
+    display: inline-block;
+  }
+
+  .button-icon .icon {
+    left: 50%;
+    margin-left: rem(-43);
+  }
+
+  .button-thumbs { 
+    display: none;
+  }
+
+}

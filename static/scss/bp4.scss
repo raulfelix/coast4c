@@ -1,0 +1,26 @@
+@media all and (max-width: 850px) { 
+  
+  .f-row.relative {
+    min-height: 0;
+    padding: 0;
+  }
+  
+  .f-row .f-3-4-fixed {
+    padding: 0;
+  }
+  
+  .bp4-1 {
+    width: 100%;
+  }
+  
+  .bp4-gone {
+    display: none;
+  }
+  
+  .section-article {
+    p, ul, ol, h1, h2, h3, h4, h5, h6, img, blockquote {
+      padding-left: rem(10);
+      padding-right: rem(10);
+    }
+  }
+}

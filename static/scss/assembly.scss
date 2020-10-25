@@ -1,0 +1,334 @@
+.no-scroll,
+.no-scroll body {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.frame {
+  width: 100%;
+
+  .slidee {
+    height: 100%;
+    list-style: none;
+  }
+
+  .sly-slide {
+    float: left;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.content {
+  padding: 16px;
+}
+
+// centered content
+.content-wrap {
+  display: table;
+}
+
+.content-row {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.m-wrap {
+  opacity: 1;
+  @include transition(opacity 1s ease);
+}
+.m-transparent {
+  opacity: 0;
+}
+
+
+.blanket {
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.6) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0.6))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.6) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.6) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.6) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0.4) 0%,rgba(0,0,0,0.6) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#99000000',GradientType=0 ); /* IE6-9 */
+}
+
+.blanket-alpha {
+  background: $white;
+  opacity: 0.97;
+}
+
+.blanket,
+.blanket-light,
+.blanket-overlay {
+  top: 0;
+  @extend %absolute;
+  width: 100%;
+  height: 100%;
+}
+.blanket-light {
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.25) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.1)), color-stop(100%,rgba(0,0,0,0.25))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.25) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.25) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.25) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.25) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
+}
+
+//------------------
+// Rows
+//------------------
+.row-up {
+  background-color: $black;
+  height: rem(120);
+  padding-top: rem(40);
+  @extend %text-center;
+  @extend %relative;
+}
+
+.button-row {
+  padding-top: rem(30);
+  padding-bottom: rem(60);
+  @extend %text-center;
+  @extend %clearfix;
+}
+
+.button-row-left {
+  text-align: left;
+}
+
+.button-row-paginate {
+  text-align: left;
+  .button-next {
+    float: right;
+  }
+  .button-prev {
+    float: left;
+  }
+}
+
+.article-detail {
+  font-family: $font-secondary;
+  font-size: rem(24);
+  display: inline-block;
+  margin: 0 rem(40) 0 0;
+  letter-spacing: 1.3px;
+}
+
+.details-row {
+  margin-top: rem(50);
+  // padding: 0 rem(40);
+  @extend %clearfix;
+
+  .bullet {
+    background-color: #cccccc;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 20px;
+    margin: 0 rem(20);
+    height: rem(5);
+    width: rem(5);
+  }
+
+  .button-share {
+    margin-top: rem(-9);
+    @extend %pull-right;
+  }
+
+  .details-row-right {
+    display: inline-block;
+  }
+
+  a {
+    color: $black;
+    &:hover {
+      color: $highlight;
+      text-decoration: none;
+      border-bottom: none;
+    }
+  }
+}
+
+.details-row-secondary {
+  font-size: rem(13);
+  margin-top: 0;
+  color: #cccccc;
+  padding: rem(40) 0 0 0;
+}
+
+
+.article-region-row {
+  display: table;
+  width: 100%;
+  padding: 0 rem(40);
+
+  p, h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+  }
+}
+
+
+.search-row {
+
+  left: 0;
+  right: 0;
+  
+  .search-row-input {
+    max-width: 1140px;
+    margin: auto;
+    height: auto;
+    padding: 0 rem(20);
+  }
+
+  .button-search {
+    float: right;
+    margin-top: rem(-54);
+    width: rem(170);
+  }
+
+  .input-search {
+    padding: rem(10) 0;
+
+    .input-search-underline {
+      height: 2px;
+      margin-top: rem(10);
+      background-color: $black;
+    }
+  }
+}
+
+.search-row-results {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: rem(50);
+  position: absolute;
+  width: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  .container {
+    max-width: rem(1140);
+    margin: 0 auto;
+    padding: rem(10) rem(20) 0 rem(20);
+  }
+}
+
+.section-bio {
+  padding: rem(100) 0;
+
+  .thumb-author, .h-5 {
+    margin-bottom: 0;
+  }
+}
+
+.section-popular {
+  background-color: #F4F4F4;
+  margin: rem(20) 0;
+  padding: rem(16);
+  
+  h5 {
+    border-bottom: 1px solid $black;
+    font-family: $font-secondary;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding-bottom: rem(5);
+  }
+}
+
+.sly-controls {
+  .sly-next,
+  .sly-prev,
+  .sly-next:active,
+  .sly-prev:active,
+  .sly-next:focus,
+  .sly-prev:focus {
+    background-color: transparent;
+    border: none;
+    color: $white;
+    display: block;
+    font-size: 30px;
+    outline: none;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .sly-prev {
+    left: rem(20);
+    top: 50%;
+  }
+  .sly-next {
+    top: 50%;
+    right: rem(20);
+  }
+
+  .sly-next:hover,
+  .sly-prev:hover {
+    cursor: pointer;
+  }
+
+  .disabled,
+  .disabled:hover {
+    opacity: 0.4;
+    color: $white;
+  }
+}
+
+
+//------------------
+// Ads
+//------------------
+.row-ad {
+  text-align: center;
+  background-color: $black;
+  padding: 16px 0;
+  height: 122px;
+}
+
+.row-ad-large {
+  text-align: center;
+  background-color: $black;
+  padding: 16px 0;
+}
+.row-bg-dark {
+  background-color: $black;
+}
+
+@media all and (min-width: 1px) {
+  .row-ad {
+    height: 282px;
+  }
+}
+@media all and (min-width: 487px) {
+  .row-ad {
+    height: 92px;
+  }
+}
+@media all and (min-width: 759px) {
+  .row-ad {
+    height: 122px;
+  }
+}
+
+
+.row-loader {
+  position: relative;
+  padding: rem(40) 0;
+  
+  i {
+    font-size: 24px;
+    color: $black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: rem(-16);
+    margin-top: rem(-16);
+  }
+}

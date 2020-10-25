@@ -1,0 +1,102 @@
+.form-row {
+  .form-row-content {
+    margin: 0 auto;
+    max-width: rem(500);
+    padding-top: rem(120);
+    width: 100%;
+
+    h1, p {
+      padding: 0;
+    }
+  }
+}
+
+.wpcf7-form {
+  max-width: 500px;
+  margin: auto;
+  text-align: left;
+  padding: 0 20px;
+  p {
+    margin-bottom: 16px;
+  }
+  label {
+    font-size: 16px;
+  }
+
+  input[type="submit"] {
+    background-color: $primary;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    display: block;
+    padding: 16px 24px;
+    font-size: 18px;
+    min-width: 150px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    background-color: white;
+    border: 1px solid #999;
+    border-radius: 8px;
+    height: 44px;
+    padding: 0 16px;
+    margin-top: 4px;
+    font-family: 'Calibre';
+    font-size: 16px;
+    &:focus {
+      border-color: #212121;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(24, 137, 230, .5);
+    }
+  }
+  
+  textarea {
+    box-sizing: border-box;
+    padding: 16px;
+    min-height: 100px;
+    width: 100%;
+  }
+}
+
+.form-subscribe {
+  margin-top: rem(90);
+
+  .input {
+    margin-right: rem(155);
+  }
+
+  .button {
+    float: right;
+    margin-top: rem(-35);
+  }
+}
+
+input[type='text'], 
+input[type='email'] {
+  background-color: transparent;
+  border: none;
+  background-color: #ddd;
+  font-size: rem(18);
+  color: $black;
+  padding: rem(4) rem(8);
+  width: 100%;
+}
+
+.input-clearable {
+  position: relative;
+  
+  input {
+    padding-right: rem(30);
+  }
+  
+  .button-input {
+    position: absolute;
+    right: rem(5);
+    top: rem(15);
+  }
+}
