@@ -35,7 +35,7 @@ body {
       text-decoration: none;
 
       &:hover {
-        color: $highlight;
+        color: $yellow4;
       }
     }
 
@@ -43,12 +43,14 @@ body {
       display: flex;
 
       .menu-item {
+        color: $grey4;
         list-style: none;
         margin-left: rem(32);
         margin-bottom: 0;
       }
 
       .current_page_item a {
+        color: $grey5;
         font-weight: $fontWeightBold;
       }
     }

@@ -3,17 +3,42 @@
   padding: rem(100) rem(40);
 
   .wp-block-group__inner-container {
-    max-width: 1300px;
+    max-width: rem(1360);
     margin: auto;
   }
 
   .wp-block-columns {
     margin-bottom: 0;
   }
+
+  @media ($mediaDownMd) {
+    .wp-block-columns {
+      flex-direction: column;
+      align-items: center;
+      .wp-block-column {
+        flex-basis: 60% !important;
+        width: 60%;
+        margin: 0;
+      }
+    }
+  }
+
+  @media ($mediaDownSm) {
+    .wp-block-columns {
+      .wp-block-column {
+        flex-basis: 100% !important;
+        width: 100%;
+      }
+    }
+  }
 }
 
 .coast-video-overlay {
   background-color: $yellow4;
+  background-image: url(../images/illustration_mountain_town.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% auto;
   border-radius: rem(16);
   position: relative;
   padding-top: 56%;
@@ -22,20 +47,53 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -70px;
-    margin-top: -70px;
-    width: 140px;
+    margin-left: rem(-30);
+    margin-top: rem(-30);
+    width: rem(60);
+
+    @media ($mediaUpSm) {
+      margin-left: rem(-50);
+      margin-top: rem(-50);
+      width: rem(100);
+    }
+
+    @media ($mediaUpLg) {
+      margin-left: rem(-70);
+      margin-top: rem(-70);
+      width: rem(140);
+    }
   }
 
   .coast-video-overlay-text {
     position: absolute;
-    bottom: 42px;
-    left: 42px;
+
     span {
       display: block;
-      font-size: 30px;
+      font-size: rem(30);
       font-weight: 500;
-      margin-bottom: 4px;
+      margin-bottom: rem(4);
+    }
+
+    @media ($mediaUpXs) {
+      bottom: rem(24);
+      left: rem(24);
+      span {
+        font-size: rem(16);
+      }
+    }
+
+    @media ($mediaUpMd) {
+      span {
+        font-size: rem(20);
+      }
+    }
+
+    @media ($mediaUpXl) {
+      bottom: rem(42);
+      left: rem(42);
+      span {
+        font-size: rem(30);
+      }
     }
   }
 }

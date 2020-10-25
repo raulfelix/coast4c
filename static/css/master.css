@@ -138,13 +138,29 @@ a {
   background-color: #FEEDCF;
   padding: 6.25rem 2.5rem; }
   .hero-video .wp-block-group__inner-container {
-    max-width: 1300px;
+    max-width: 85rem;
     margin: auto; }
   .hero-video .wp-block-columns {
     margin-bottom: 0; }
+  @media (max-width: 992px) {
+    .hero-video .wp-block-columns {
+      flex-direction: column;
+      align-items: center; }
+      .hero-video .wp-block-columns .wp-block-column {
+        flex-basis: 60% !important;
+        width: 60%;
+        margin: 0; } }
+  @media (max-width: 768px) {
+    .hero-video .wp-block-columns .wp-block-column {
+      flex-basis: 100% !important;
+      width: 100%; } }
 
 .coast-video-overlay {
   background-color: #FEB834;
+  background-image: url(../images/illustration_mountain_town.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% auto;
   border-radius: 1rem;
   position: relative;
   padding-top: 56%; }
@@ -152,18 +168,41 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -70px;
-    margin-top: -70px;
-    width: 140px; }
+    margin-left: -1.875rem;
+    margin-top: -1.875rem;
+    width: 3.75rem; }
+    @media (min-width: 480px) {
+      .coast-video-overlay img {
+        margin-left: -3.125rem;
+        margin-top: -3.125rem;
+        width: 6.25rem; } }
+    @media (min-width: 992px) {
+      .coast-video-overlay img {
+        margin-left: -4.375rem;
+        margin-top: -4.375rem;
+        width: 8.75rem; } }
   .coast-video-overlay .coast-video-overlay-text {
-    position: absolute;
-    bottom: 42px;
-    left: 42px; }
+    position: absolute; }
     .coast-video-overlay .coast-video-overlay-text span {
       display: block;
-      font-size: 30px;
+      font-size: 1.875rem;
       font-weight: 500;
-      margin-bottom: 4px; }
+      margin-bottom: 0.25rem; }
+    @media (min-width: 0px) {
+      .coast-video-overlay .coast-video-overlay-text {
+        bottom: 1.5rem;
+        left: 1.5rem; }
+        .coast-video-overlay .coast-video-overlay-text span {
+          font-size: 1rem; } }
+    @media (min-width: 768px) {
+      .coast-video-overlay .coast-video-overlay-text span {
+        font-size: 1.25rem; } }
+    @media (min-width: 1110px) {
+      .coast-video-overlay .coast-video-overlay-text {
+        bottom: 2.625rem;
+        left: 2.625rem; }
+        .coast-video-overlay .coast-video-overlay-text span {
+          font-size: 1.875rem; } }
 
 /* v1.0.5 */
 /* Core RS CSS file. 95% of time you shouldn't change anything here. */
@@ -625,14 +664,16 @@ body {
       font-size: 1rem;
       text-decoration: none; }
       .header .header-big-nav a:hover {
-        color: #1889e6; }
+        color: #FEB834; }
     .header .header-big-nav .menu {
       display: flex; }
       .header .header-big-nav .menu .menu-item {
+        color: #323335;
         list-style: none;
         margin-left: 2rem;
         margin-bottom: 0; }
       .header .header-big-nav .menu .current_page_item a {
+        color: #000000;
         font-weight: 700; }
 
 .has-scrolled .header {
