@@ -1,0 +1,52 @@
+.track-record {
+  padding: rem(60) rem(40);
+
+  @media ($mediaUpLg) {
+    padding: rem(100) rem(40);
+  }
+
+  .wp-block-group__inner-container {
+    max-width: $maxWidth;
+    margin: auto;
+
+    .wp-block-column:first-child {
+      padding-right: rem(40);
+    }
+  }
+
+  @media ($mediaDownMd) {
+    .wp-block-columns {
+      flex-direction: column;
+      .wp-block-column {
+        flex-basis: 100% !important;
+        width: 100%;
+      }
+    }
+    .wp-block-column:not(:first-child) {
+      margin-left: 0;
+    }
+  }
+
+  h2 {
+    font-size: rem(42);
+    margin-bottom: rem(20);
+    line-height: rem(55);
+  }
+  p {
+    font-size: rem(18);
+    line-height: rem(25);
+  }
+
+  .track-record-video {
+    box-shadow: rgba(57, 16, 133, 0.3) 0px 8px 15px;
+    margin-top: 0;
+
+    @media ($mediaUpLg) {
+      margin-top: -160px;
+    }
+
+    .wp-block-embed__wrapper {
+      overflow: hidden;
+    }
+  }
+}
