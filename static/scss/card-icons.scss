@@ -1,0 +1,66 @@
+.card-icons {
+  text-align: center;
+  padding: rem(100) rem(40);
+
+  .wp-block-group__inner-container {
+    max-width: $maxWidth;
+    margin: auto;
+  }
+
+  .wp-block-column {
+    max-width: rem(320);
+    margin: 0 auto;
+    margin-bottom: rem(40);
+    padding: 0 rem(16);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media ($mediaUpLg) {
+      max-width: 100%;
+      padding: 0 rem(40);
+    }
+  }
+
+  @media ($mediaDownSm) {
+    .wp-block-columns {
+      flex-direction: column;
+      .wp-block-column {
+        flex-basis: 100% !important;
+        width: 100%;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 42px;
+    margin-bottom: rem(80);
+  }
+
+  h4 {
+    font-size: rem(20);
+    margin-bottom: rem(8);
+  }
+
+  p {
+    font-size: rem(18);
+    line-height: rem(25);
+    margin-bottom: 0;
+  }
+
+  .wp-block-image {
+    display: flex;
+    justify-content: center;
+    height: rem(115);
+    margin-bottom: rem(20);
+
+    @media ($mediaUpMd) {
+      margin-bottom: rem(40);
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+}

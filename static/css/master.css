@@ -87,7 +87,7 @@ p, ul li, h1, h2, h3, h4, h5, h6, a {
   font-family: "Poppins", sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500; }
+  font-weight: 600; }
 
 .has-large-font-size {
   line-height: 42px; }
@@ -203,6 +203,50 @@ a {
         left: 2.625rem; }
         .coast-video-overlay .coast-video-overlay-text span {
           font-size: 1.875rem; } }
+
+.card-icons {
+  text-align: center;
+  padding: 6.25rem 2.5rem; }
+  .card-icons .wp-block-group__inner-container {
+    max-width: 85rem;
+    margin: auto; }
+  .card-icons .wp-block-column {
+    max-width: 20rem;
+    margin: 0 auto;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem; }
+    .card-icons .wp-block-column:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 992px) {
+      .card-icons .wp-block-column {
+        max-width: 100%;
+        padding: 0 2.5rem; } }
+  @media (max-width: 768px) {
+    .card-icons .wp-block-columns {
+      flex-direction: column; }
+      .card-icons .wp-block-columns .wp-block-column {
+        flex-basis: 100% !important;
+        width: 100%; } }
+  .card-icons h2 {
+    font-size: 42px;
+    margin-bottom: 5rem; }
+  .card-icons h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem; }
+  .card-icons p {
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+    margin-bottom: 0; }
+  .card-icons .wp-block-image {
+    display: flex;
+    justify-content: center;
+    height: 7.1875rem;
+    margin-bottom: 1.25rem; }
+    @media (min-width: 768px) {
+      .card-icons .wp-block-image {
+        margin-bottom: 2.5rem; } }
+    .card-icons .wp-block-image img {
+      height: 100%; }
 
 /* v1.0.5 */
 /* Core RS CSS file. 95% of time you shouldn't change anything here. */
@@ -1322,23 +1366,8 @@ body {
     font-weight: normal; }
 
 .card-text,
-.card-highlight,
-.card-icons-list {
+.card-highlight {
   margin-bottom: 80px; }
-
-.card-hero {
-  max-width: 1140px;
-  margin: auto;
-  margin-top: 40px;
-  margin-bottom: 50px; }
-  .card-hero .wp-block-column:first-child {
-    padding-right: 50px; }
-  .card-hero h2 {
-    font-size: 28px;
-    line-height: 1.5; }
-  .card-hero h2, .card-hero h2 a {
-    font-family: 'Merriweather', serif;
-    font-weight: 700; }
 
 .blade .wp-block-group__inner-container,
 .card-text {
@@ -1361,16 +1390,14 @@ body {
 
 .blade h2,
 .card-text h2,
-.card-highlight h2,
-.card-icons-list h2 {
+.card-highlight h2 {
   font-family: 'Calibre-medium', Arial, Helvetica, sans-serif;
   font-size: 37px;
   font-weight: normal; }
 
 .blade h4,
 .card-text h4,
-.card-highlight h4,
-.card-icons-list h4 {
+.card-highlight h4 {
   font-family: 'Calibre', Arial, Helvetica, sans-serif;
   font-size: 22px;
   font-weight: normal; }
@@ -1404,40 +1431,9 @@ body {
   .card-highlight-light p, .card-highlight-light h2 {
     color: #212121; }
 
-.card-text,
-.card-hero,
-.card-icons-list {
+.card-text {
   padding-left: 20px;
   padding-right: 20px; }
-
-.card-icons-list h2 {
-  margin-bottom: 50px; }
-
-.card-icons-list h4 {
-  font-size: 22px;
-  margin-bottom: 20px; }
-
-.card-icons-list .wp-block-group__inner-container {
-  max-width: 1240px;
-  margin: auto; }
-
-.card-icons-list .wp-block-column {
-  text-align: center; }
-
-.card-icons-list .wp-block-image {
-  display: flex;
-  justify-content: center;
-  height: 80px;
-  margin-bottom: 40px; }
-  .card-icons-list .wp-block-image img {
-    height: 100%; }
-
-.card-icons-list .wp-block-buttons {
-  text-align: center; }
-
-.card-icons-list p {
-  font-size: 18px;
-  line-height: 25px; }
 
 .card-quote {
   margin-bottom: 80px; }
@@ -1475,9 +1471,7 @@ body {
     height: 100%;
     position: relative;
     top: 0;
-    left: 0; }
-  .card-hero .wp-block-column:first-child {
-    padding-right: 0; } }
+    left: 0; } }
 
 .wp-block-button__link {
   background-color: #78BEFA;
