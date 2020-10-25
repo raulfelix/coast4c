@@ -1,0 +1,29 @@
+.statement {
+  background-color: $blue5;
+  background-image: url(../images/people_blue_bg.png);
+  background-repeat: no-repeat;
+  background-position: 200% -19%;
+  background-size: auto 360px;
+
+  .wp-block-group__inner-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: rem(100) rem(40);
+  }
+
+  p {
+    color: $white;
+    font-size: rem(32);
+    line-height: rem(45);
+    font-weight: $fontWeightMedium;
+  }
+
+
+  @media ($mediaUpMd) {
+    background-position: 110% -19%;
+    p {
+      font-size: rem(42);
+      line-height: rem(64);
+    }
+  }
+}
