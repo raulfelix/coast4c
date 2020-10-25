@@ -13,7 +13,7 @@
   <title><?php wp_title(''); ?></title>
   <?php $uri = get_template_directory_uri(); ?>
   <link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/static/images/favicon-96x96.png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <?php if ( is_single() ): ?>
     <meta property="og:title" content="<?php echo the_title() ?>" />
@@ -24,7 +24,6 @@
   <?php endif; ?>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <?php wp_head(); ?>
 </head>

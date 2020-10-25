@@ -31,19 +31,25 @@ body {
 
     a {
       color: $text;
-      font-size: 18px;
+      font-size: rem(16);
       text-decoration: none;
 
       &:hover {
         color: $highlight;
       }
     }
+
     .menu {
       display: flex;
+
       .menu-item {
         list-style: none;
-        margin-left: 32px;
+        margin-left: rem(32);
         margin-bottom: 0;
+      }
+
+      .current_page_item a {
+        font-weight: $fontWeightBold;
       }
     }
   }
