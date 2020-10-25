@@ -1,0 +1,264 @@
+.button {
+  background-color: transparent;
+  border: 2px solid $black;
+  border-radius: 40px;
+  color: $black;
+  font-size: rem(24);
+  font-family: $font-secondary;
+
+  display: inline-block;
+  height: rem(38);
+  line-height: rem(38);
+  margin: 0 auto;
+  min-width: rem(140);
+  padding: 0 rem(30);
+  text-transform: uppercase;
+  @extend %relative;
+  @extend %text-center;
+
+  &:hover {
+    cursor: pointer;
+    color: $white;
+    background-color: $black;
+    border-color: $black;
+  }
+
+  &:focus, &:active {
+    outline: none;
+  }
+}
+
+
+.button-disabled {
+  display: none;
+}
+
+.button-black {
+  color: $white;
+  border-color: $white;
+  &:hover {
+    color: $black;
+    background-color: $white;
+    border-color: $white;
+  }
+}
+
+.button-white {
+  color: $white;
+  border-color: $white;
+  &:hover, &:active {
+    color: $white;
+    background-color: transparent;
+    border-color: $white;
+  }
+}
+
+.button-up {
+  padding-left: 54px;
+  i {
+    font-size: 24px;
+    position: absolute;
+    left: rem(26);
+    top: rem(12);
+  }
+}
+
+
+.button-loader {
+  min-width: rem(200);
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+  }
+}
+
+
+.button-loader-active,
+.button-loader-active:active,
+.button-loader-active:hover {
+  background-color: $black;
+  border-color: $black;
+  color: $white;
+}
+
+
+
+.button-share {
+  width: auto;
+  .icon-share {
+    font-size: rem(22);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: rem(6);
+    margin-top: rem(-5);
+  }
+}
+
+.button-icon {
+  .text {
+    padding-left: rem(20);
+  }
+  .icon {
+    font-size: rem(20);
+    position: absolute;
+    left: rem(40);
+  }
+}
+
+.button-url {
+  color: $black;
+  padding: 0 rem(20);
+  max-width: rem(600);
+  width: 100%;
+  @include box-sizing(border-box);
+  &:hover {
+    color: $black;
+    background-color: $white;
+  }
+}
+
+.button-next .icon-arrow-next,
+.button-prev .icon-arrow-prev {
+  font-size: 20px;
+  top: rem(6);
+  @extend %absolute;
+}
+
+.button-prev,
+.button-next {
+  min-width: 0;
+  width: rem(110);
+}
+
+.button-prev {
+  padding-left: rem(20);
+  padding-right: 0;
+  .icon-arrow-prev {
+    left: rem(20);
+  }
+}
+
+.button-next {
+  padding-left: 0;
+  padding-right: rem(20);
+  .icon-arrow-next {
+    right: rem(20);
+    left: auto;
+  }
+}
+
+
+.button-input {
+  background-color: transparent;
+  font-size: 16px;
+  width: rem(20);
+  height: rem(20);
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button-gallery {
+  background-color: transparent;
+  border-color: $white;
+  color: $white;
+  min-width: 0;
+  margin: 0 rem(10);
+  padding: 0 rem(25);
+  font-size: 20px;
+  text-align: center;
+
+  span {
+    display: none;
+    vertical-align: middle;
+    margin-left: rem(10);
+  }
+
+  &:hover {
+    background-color: transparent;
+    color: $white;
+    border-color: $white;
+  }
+}
+
+.dropdown {
+  background-color: $white;
+  font-size: rem(16);
+  text-align: left;
+
+  padding: 0;
+  min-width: rem(210);
+  
+  &:hover, 
+  &:active {
+    background-color: $black;
+    border-color: $black;
+    .dropdown-label {
+      color: $white;
+    }
+  }
+
+  .dropdown-label {
+    font-family: $font-secondary;
+    font-size: rem(24);
+    border-radius: 40px;
+    display: block;
+    text-align: center;
+    padding: 0;
+  }
+
+  .icon-dropdown {
+    font-size: 16px;
+    right: rem(18);
+    top: rem(10);
+    @extend %absolute;
+    @include transition(transform 200ms ease);
+  }
+
+  .dropdown-items {
+    background-color: $white;
+    display: none;
+    @include box-shadow(1px 1px 3px rgba(0,0,0,0.4));
+    
+    @extend %absolute;
+    top: rem(40);
+    width: 100%;
+    z-index: 100;
+
+    .dropdown-item {
+      border-top: 1px solid #ddd;
+      font-family: $font-secondary;
+      font-size: rem(20);
+      margin-bottom: -1px;
+      padding: rem(5) rem(12);
+      @extend %block;
+      @extend %relative;
+    }
+
+    .dropdown-item-active {
+      color: $highlight
+    }
+  }
+}
+
+.dropdown-active {
+  background-color: $black;
+  
+  .dropdown-label {
+    color: $white;
+  }
+  
+  .dropdown-items {
+    display: block;
+  }
+
+  .icon-dropdown {
+    @include transform(rotate(180deg));
+  }
+}

@@ -1,0 +1,56 @@
+//
+// Variables
+//
+$base_font_size: 16;
+
+//
+// font families
+//
+$font-secondary: 'Tungsten Narrow';
+
+
+//
+// colours
+//
+$black: #000;
+$white: #FFFFFF;
+$grey: #F3F3F3;
+
+
+//
+// Mixins
+//
+@mixin transition($properties...) {
+  -webkit-transition: $properties;
+     -moz-transition: $properties;
+       -o-transition: $properties;
+          transition: $properties;
+}
+
+@mixin transform($properties...) {
+  -webkit-transform: $properties;
+     -moz-transform: $properties;
+       -o-transform: $properties;
+          transform: $properties;
+}
+
+@mixin box-shadow($properties...) {
+  -webkit-box-shadow: $properties;
+     -moz-box-shadow: $properties;
+       -o-box-shadow: $properties;
+          box-shadow: $properties;
+}
+
+@mixin box-sizing($property) {
+  -webkit-box-sizing: $property;
+     -moz-box-sizing: $property;
+       -o-box-sizing: $property;
+          box-sizing: $property;
+}
+
+//
+// Functions
+//
+@function rem($size) {
+  @return #{ (1 / $base_font_size) * $size }rem;
+}
