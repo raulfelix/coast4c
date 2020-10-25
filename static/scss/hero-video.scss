@@ -3,7 +3,7 @@
   padding: rem(100) rem(40);
 
   .wp-block-group__inner-container {
-    max-width: rem(1360);
+    max-width: $maxWidth;
     margin: auto;
   }
 
