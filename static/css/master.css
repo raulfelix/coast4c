@@ -35,7 +35,7 @@ img {
 html, body, div, img, ol, ul, li, a, h1, h2, h3, h4, h5, h6, p,
 header, footer, section, article, figure, figcaption, button, input {
   border: 0;
-  font-family: 'Calibre', Arial;
+  font-family: 'Poppins', sans-serif;
   font-weight: normal;
   font-style: normal;
   margin: 0;
@@ -108,7 +108,7 @@ a {
   color: #000;
   text-decoration: underline; }
   a:hover {
-    color: #FEB834; }
+    color: #FFA500; }
 
 .section-article iframe {
   display: block !important;
@@ -762,7 +762,6 @@ body {
     transition: opacity 400ms ease 0s, visibility 0s 0s; } }
 
 .footer {
-  background-color: #128263;
   color: #FFFFFF; }
   .footer .footer-wrapper {
     padding: 2rem;
@@ -1440,10 +1439,10 @@ body {
     padding-right: 0; } }
 
 .wp-block-button__link {
-  background-color: #59AAF7;
+  background-color: #78BEFA;
   color: #fff; }
   .wp-block-button__link:hover {
-    background-color: #59AAF7; }
+    background-color: #78BEFA; }
 
 .card-stat {
   max-width: 800px;
