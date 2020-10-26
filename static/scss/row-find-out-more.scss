@@ -1,0 +1,19 @@
+.find-out-more {
+  background-color: $yellow1;
+  padding: rem(60) rem(40);
+  margin-top: rem(-260);
+  padding-top: rem(300);
+  text-align: center;
+
+  .wp-block-group__inner-container {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  p {
+    font-size: rem(42);
+    font-weight: $fontWeightMedium;
+    margin-bottom: rem(40);
+    line-height: rem(55);
+  }
+}

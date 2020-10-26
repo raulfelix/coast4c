@@ -1,0 +1,46 @@
+.reach-impact {
+  padding: rem(60) rem(40);
+
+  .wp-block-group__inner-container {
+    max-width: $maxWidth;
+    margin: auto;
+  }
+
+  h2 {
+    font-size: rem(42);
+    margin-bottom: rem(20);
+    line-height: rem(55);
+  }
+}
+
+.card-statistic {
+  background-color: #BBDFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+
+  .wp-block-image {
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .wp-block-image + .wp-block-group {
+    padding: 32px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    h3 {
+      font-size: 100px;
+      font-weight: $fontWeightSemiBold;
+      margin-bottom: 0;
+      line-height: 100px;
+    }
+    h3 + p {
+      font-size: 20px;
+      font-weight: $fontWeightSemiBold;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
