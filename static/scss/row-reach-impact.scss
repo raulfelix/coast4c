@@ -6,16 +6,25 @@
     margin: auto;
   }
 
+  .wp-block-column {
+    @media ($mediaDownSm) {
+      flex-basis: 100% !important;
+      margin: 0 auto;
+      max-width: rem(400);
+    }
+  }
+
   h2 {
     font-size: rem(42);
-    margin-bottom: rem(20);
     line-height: rem(55);
+    margin-bottom: 0;
   }
 }
 
 .card-statistic {
-  background-color: #BBDFFF;
+  background-color: $blue2;
   border-radius: 16px;
+  margin-bottom: rem(32);
   overflow: hidden;
   position: relative;
 
@@ -25,20 +34,35 @@
   }
 
   .wp-block-image + .wp-block-group {
-    padding: 32px;
+    padding: 24px;
     position: relative;
     z-index: 1;
     text-align: center;
+  
+    @media ($mediaUpLg) {
+      padding: 32px;
+    }
+
     h3 {
-      font-size: 100px;
+      font-size: rem(60);
       font-weight: $fontWeightSemiBold;
       margin-bottom: 0;
-      line-height: 100px;
+      line-height: rem(100);
+
+      @media ($mediaUpLg) {
+        font-size: rem(70);
+      }
+
+      @media ($mediaUpXl) {
+        font-size: rem(100);
+      }
     }
+
     h3 + p {
-      font-size: 20px;
+      font-size: rem(20);
       font-weight: $fontWeightSemiBold;
     }
+
     p:last-child {
       margin-bottom: 0;
     }

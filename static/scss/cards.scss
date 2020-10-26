@@ -220,29 +220,6 @@ $max-width: 1240px;
   }
 }
 
-@media screen and (max-width: 599px) {
-  .card-quote {
-    .wp-block-image img {
-      height: 100%;
-      position: relative;
-      top: 0;
-      left: 0;
-    }
-  }
-}
-
-
-.wp-block-button__link {
-  background-color: $blue5;
-  color: $white;
-  font-weight: $fontWeightMedium;
-  padding-left: rem(24);
-  padding-right: rem(24);
-  &:hover {
-    background-color: $blue4;
-  }
-}
-
 .image-stretch {
   display: block !important;;
   img {

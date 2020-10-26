@@ -10,9 +10,14 @@
   }
 
   p {
-    font-size: rem(42);
+    font-size: rem(32);
     font-weight: $fontWeightMedium;
     margin-bottom: rem(40);
-    line-height: rem(55);
+    line-height: rem(44);
+
+    @media ($mediaUpMd) {
+      font-size: rem(42);
+      line-height: rem(55);
+    }
   }
 }
