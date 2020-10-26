@@ -352,30 +352,3 @@ $max-width: 1240px;
     }
   }
 }
-
-
-.card-research {
-  .wp-block-columns {
-    margin-bottom: 16px;
-  }
-  .wp-block-image {
-    margin-bottom: 0;
-  }
-  figcaption {
-    margin-bottom: 0;
-  }
-  figure {
-    border: 1px solid #DBDBDB;
-    border-radius: 8px;
-    padding: 20px 20px 8px 20px;
-    text-align: center;
-
-    &:hover {
-      background-color: #f5f5f5;
-      border: 1px solid #ddd;
-    }
-    a {
-      display: block;
-    }
-  }
-}
