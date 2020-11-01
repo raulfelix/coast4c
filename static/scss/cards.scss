@@ -5,20 +5,6 @@ $max-width: 1240px;
   margin: auto;
   padding-left: rem(40);
   padding-right: rem(40);
-
-  .row-title {
-    h1, h2, h3, h4 {
-      font-family: 'Calibre';
-      font-weight: normal;
-    }
-    h1, h2 {
-      font-size: 37px;
-    }
-    h2 + h4 {
-      font-size: 24px;
-      margin-bottom: 60px;
-    }
-  }
 }
 
 .row-highlight {
@@ -252,39 +238,6 @@ $max-width: 1240px;
   }
 }
 
-.row-team  {
-  padding: 0 20px;
-  max-width: $max-width;
-  margin: auto;
-
-  h1 {
-    margin-bottom: 20px;
-  }
-  h1,
-  h1 + h4 {
-    text-align: center;
-  }
-
-  h1 + h4 {
-    font-size: 24px;
-    margin-bottom: 60px;
-  }
-
-  .wp-block-image img {
-    width: 100%;
-  }
-  .wp-block-image + p {
-    font-size: 15px;
-    line-height: 22px;
-  }
-  .wp-block-image figcaption {
-    font-size: 16px;
-    strong {
-      font-size: 14px;
-      font-weight: $fontWeightMedium;
-    }
-  }
-}
 
 .wp-block-embed {
   .wp-block-embed__wrapper {
