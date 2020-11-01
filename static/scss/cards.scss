@@ -266,7 +266,6 @@ $max-width: 1240px;
   }
 
   h1 + h4 {
-    font-family: 'Calibre';
     font-size: 24px;
     margin-bottom: 60px;
   }
@@ -282,23 +281,10 @@ $max-width: 1240px;
     font-size: 16px;
     strong {
       font-size: 14px;
-      font-family: 'Calibre-medium';
-      font-weight: normal;
+      font-weight: $fontWeightMedium;
     }
   }
 }
-
-
-.serif,
-.serif a {
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-}
-
-.mb-0 {
-   margin-bottom: 0 !important;
-}
-
 
 .wp-block-embed {
   .wp-block-embed__wrapper {

@@ -16,13 +16,11 @@ h1, h2, h3, h4, h5, h6 {
 .has-large-font-size {
   line-height: 42px;
 }
-//---------------------------------------
-// reserved for content editing articles
-//---------------------------------------
+
 p, ul li {
-  font-size: 20px;
-  line-height: 28px;
-  margin: 0 0 rem(30) 0;
+  font-size: rem(18);
+  line-height: rem(28);
+  margin-bottom: rem(28);
 }
 
 ul {
@@ -42,32 +40,9 @@ a {
   }
 }
 
-.section-article {
-  iframe {
-    display: block !important;
-    margin: 0 auto !important;
+.typography-statement-wrapper {
+  max-width: 50%;
+  @media ($mediaDownSm) {
+    max-width: 100%;
   }
-
-  .arve-play-background,
-  .arve-play-background:focus,
-  .arve-play-background:hover {
-    background: url('../../images/play@2x.png') no-repeat center center;
-    background-size: rem(66);
-    opacity: 1;
-  }
-}
-
-.has-small-font-size {
-  line-height: 18px;
-}
-.has-normal-font-size {
-  line-height: 22px;
-  margin-bottom: 12px;
-}
-
-.mb-4 {
-  margin-bottom: 40px;
-}
-.mt-4 {
-  margin-top: 40px;
 }

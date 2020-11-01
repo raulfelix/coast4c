@@ -55,4 +55,5 @@ $grey: #F3F3F3;
   @return #{ (1 / $base_font_size) * $size }rem;
 }
 
-$maxWidth: rem(1360);
+// $maxWidth: rem(1360);
+$maxWidth: rem(1200);

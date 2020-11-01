@@ -1,0 +1,52 @@
+.about-hero {
+  background-color: $yellow1;
+  padding: rem(100) rem(40);
+
+  h2 {
+    font-size: rem(42);
+    line-height: rem(55);
+    margin-bottom: rem(32);
+  }
+  
+  p {
+    font-size: rem(18);
+  }
+
+  .wp-block-group__inner-container {
+    max-width: $maxWidth;
+    margin: auto;
+  }
+
+  .wp-block-columns {
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  .card-info {
+    position: absolute;
+  }
+
+  @media ($mediaDownMd) {
+    .card-info { 
+      position: relative;
+    }
+    .wp-block-columns {
+      flex-direction: column;
+      align-items: center;
+      .wp-block-column {
+        flex-basis: 60%;
+        width: 60%;
+        margin: 0;
+      }
+    }
+  }
+
+  @media ($mediaDownSm) {
+    .wp-block-columns {
+      .wp-block-column {
+        flex-basis: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

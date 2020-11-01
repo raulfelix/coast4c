@@ -1,0 +1,51 @@
+.about-problem {
+  padding: rem(100) rem(40);
+
+  h2 {
+    font-size: rem(42);
+    line-height: rem(55);
+    margin-bottom: rem(32);
+  }
+  
+  p {
+    font-size: rem(18);
+  }
+
+  .about-problem-items {
+    background-color: #F9F9F9;
+    border-radius: 16px;
+    padding: 40px 24px 0 24px;
+    text-align: center;
+
+    p {
+      font-size: rem(14);
+      line-height: rem(20);
+    }
+
+    @media ($mediaDownSm) {
+      .wp-block-columns {
+        flex-direction: column;
+        align-items: center;
+        .wp-block-column {
+          flex-basis: 100%;
+          max-width: 180px;
+          width: 100%;
+          margin: 0 !important;
+        }
+      }
+    }
+
+    .wp-block-image {
+      img {
+        display: inline-block;
+        height: rem(50);
+        text-align: center;
+      }
+    }
+  }
+
+  .wp-block-group__inner-container {
+    margin: auto;
+    max-width: $maxWidth;
+  }
+}
