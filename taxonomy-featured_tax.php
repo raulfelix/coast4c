@@ -30,11 +30,8 @@
     wp_reset_postdata();
   ?>
 
-  <div class="section-thumb-bg">
-    <div class="f-grid section-thumb">
-      <?php get_template_part('partials/module', 'sort'); ?>
-      <div class="f-row">
-
+  <div class="blog-post-tiles">
+    
   <?php
     // get order and default to date otherwise by popularity
     $order = isset($_GET['orderby']) ? $_GET['orderby'] : 'desc';
@@ -64,9 +61,7 @@
         $wp_query->the_post();
   ?>
 
-        <div class="f-1-3 bp1-1-2 thumb-no-category">
-          <?php get_template_part('partials/article', 'thumb'); ?>
-        </div>
+  <?php get_template_part('partials/article', 'thumb'); ?>
   
   <?php  
       generate_inline_thumb_fix($idx++);
@@ -75,7 +70,7 @@
   ?>
     </div>
       <?php get_template_part('partials/module', 'paginate-links'); ?>
-    </div>
+
   </div>
   
 <?php 

@@ -117,7 +117,7 @@ add_filter('tiny_mce_before_init', 'mce_mod');
 function post_remove () {
   remove_menu_page('edit.php');
 }
-add_action('admin_menu', 'post_remove'); 
+// add_action('admin_menu', 'post_remove'); 
 
 
 // ------------------------------ 
@@ -159,7 +159,7 @@ function register_custom_taxonomies() {
     )
   );
 
-  register_taxonomy( 'news_tax', 'lwa_news', $args );
+  register_taxonomy( 'news_tax', 'news', $args );
 }
 
 add_action( 'init', 'register_custom_taxonomies' );
@@ -168,10 +168,10 @@ add_action( 'init', 'register_custom_taxonomies' );
 // ------------------------------ 
 // register custom post types
 //
-// news: lwa_news
+// news: news
 // ------------------------------ 
 function create_post_type() {
-  $lwa_news_post_type = array(
+  $news_post_type = array(
     'labels' => array(
       'name' => __( 'News posts' ),
       'singular_name' => __( 'News' ),
@@ -187,7 +187,7 @@ function create_post_type() {
     'taxonomies' => array( 'news_tax', 'subtitle', 'carousel' )
   );
 
-  register_post_type( 'lwa_news', $lwa_news_post_type );
+  register_post_type( 'news', $news_post_type );
 }
 
 add_action( 'init', 'create_post_type' );
@@ -205,7 +205,7 @@ function custom_post_type_permastruct($link, $post) {
       $link = str_replace('%featured_tax%', array_pop($cats)->slug, $link);
       return $link;
   } 
-  else if ($post->post_type === 'lwa_news') {
+  else if ($post->post_type === 'news') {
     if ($cats = get_the_terms($post->ID, 'news_tax'))
       $link = str_replace('%news_tax%', array_pop($cats)->slug, $link);
       return $link;

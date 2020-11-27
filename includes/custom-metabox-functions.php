@@ -5,14 +5,14 @@
  */
 
 function add_custom_meta_box() {
-  $screens = array( 'lwa_feature', 'lwa_news' );
-  foreach ( $screens as $screen ) {
-    add_meta_box('photos_id', 'Credits', 'photos_meta_box_callback', $screen);
-    add_meta_box('post_sponsor', 'Sponsor details', 'post_sponsor_meta_box_callback', $screen);
-  }
+  // $screens = array( 'lwa_feature', 'lwa_news' );
+  // foreach ( $screens as $screen ) {
+  //   add_meta_box('photos_id', 'Credits', 'photos_meta_box_callback', $screen);
+  //   add_meta_box('post_sponsor', 'Sponsor details', 'post_sponsor_meta_box_callback', $screen);
+  // }
 
-  add_meta_box('shop_url', 'Shop URL', 'shop_meta_box_callback', 'lwa_shop');
-  add_meta_box('news_featured_url', 'Show post in featured section', 'news_featured_meta_box_callback', 'lwa_news');
+  // add_meta_box('shop_url', 'Shop URL', 'shop_meta_box_callback', 'lwa_shop');
+  // add_meta_box('news_featured_url', 'Show post in featured section', 'news_featured_meta_box_callback', 'lwa_news');
 }
 add_action( 'add_meta_boxes', 'add_custom_meta_box' );
 
