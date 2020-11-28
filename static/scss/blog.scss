@@ -18,6 +18,11 @@
   }
 }
 
+.blog-post-title {
+  max-width: rem(600);
+  margin-bottom: rem(60);
+}
+
 .blog-post-share {
   color: $black;
   margin-bottom: 40px;
@@ -49,7 +54,7 @@
   display: inline-block;
   height: 34px;
   line-height: 33px;
-  padding: 0 16px;
+  padding: 0 12px;
   text-align: center;
   font-size: 12px;
   font-weight: $fontWeightMedium;
@@ -200,13 +205,9 @@
   }
 }
 
-.blog-post-tiles-title {
-  h1 {
-    padding-left: 8px;
-  }
-}
-
 .blog-post-tiles {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -12px;
+  margin-right: -12px;
 }

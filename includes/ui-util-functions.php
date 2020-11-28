@@ -19,8 +19,8 @@ function get_when() {
     "/ year/"
   );
   $time_replacements = array(
-    "ms",
-    "ms",
+    "mins",
+    "mins",
     "h",
     "h",
     "d",

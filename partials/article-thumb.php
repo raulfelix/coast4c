@@ -3,18 +3,22 @@
    * Standard thumbnail layout
    */
   $categories = get_the_category($post->ID);
+  $author = get_post_meta($post->ID, 'Author', true);
 ?>
 
 <div class="blog-post-tile">
   <?php 
-    if ( ! empty( $categories ) &&  $categories[0]->name != 'Uncategorised'):
+    if ( ! empty( $categories ) && $categories[0]->name != 'Uncategorised'):
   ?>
     <div class="blog-pill blog-post-category">
-      <a href="<?php echo esc_url( get_category_link( $categories[0]->term_id ) ) ?>"><?php echo $categories[0]->name; ?></a>
+      <a href="<?php echo esc_url( get_category_link( $categories[0]->term_id ) ) ?>">
+        <?php echo $categories[0]->name; ?>
+      </a>
+      <?php if ( ! empty( $author )): ?>
+        / <?php echo $author; ?>
+      <?php endif;?>
     </div>
-  <?php
-    endif;
-  ?>
+  <?php endif; ?>
   
   <a href="<?php echo the_permalink(); ?>" class="blog-post-tile-image">
     <?php get_thumbnail(false, $post->post_type === 'lwa_news' ? true : false, false); ?>  
