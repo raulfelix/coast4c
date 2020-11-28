@@ -18,17 +18,18 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 42px;
 }
 
-p, ul li {
+p, li {
   font-size: rem(18);
   line-height: rem(28);
   margin-bottom: rem(28);
 }
 
-ul {
+ul, ol{
   margin-bottom: 30px;
 }
+ol li,
 ul li {
-  margin-left: 20px;
+  margin-left: rem(40);
   margin-bottom: 8px;
 }
 
@@ -38,6 +39,20 @@ a {
 
   &:hover {
     color: $yellow5;
+  }
+}
+
+blockquote {
+  border-left: 4px solid $yellow1;
+  p {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  margin: 0 0 rem(40) 0;
+  padding: 30px;
+
+  cite {
+    color: $grey3;
   }
 }
 

@@ -1,0 +1,48 @@
+.blog-post-tile {
+  flex-basis: 100%;
+  margin-bottom: 32px;
+  position: relative;
+
+  @media ($mediaUpMd) {
+    flex-basis: 33.333%;
+    padding: 0 12px;
+  }
+
+  .blog-post-tile-when {
+    padding: 0;
+    position: absolute;
+    top: 16px;
+    right: 28px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .blog-post-category {
+    position: absolute;
+    left: 28px;
+    top: 16px;
+  }
+
+  .blog-post-tile-image {
+    border-radius: 16px;
+    overflow: hidden;
+    display: block;
+    margin-bottom: rem(16);
+    img { 
+      width: 100%;
+    }
+  }
+  .blog-post-tile-title {
+    display: inline-block;
+    font-size: rem(20);
+    font-weight: $fontWeightMedium;
+    line-height: rem(26);
+    margin-bottom: rem(8);
+    text-decoration: none;
+  }
+
+  .blog-post-tile-caption p {
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+}

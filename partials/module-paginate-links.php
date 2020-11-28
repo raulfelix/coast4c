@@ -1,5 +1,3 @@
-<div class="f-row button-row button-row-paginate">
-  <div class="f-1">
   
   <?php 
 
@@ -32,8 +30,5 @@
 
   ?>
   
-  <a class="button button-prev <?php echo $prev_num === null ? 'button-disabled':'' ?>" href="<?php echo $prev_num; ?><?php echo $order_prev; ?>"><i class="icon-arrow-prev"></i>prev</a>
-  <a class="button button-next <?php echo $next_num === null ? 'button-disabled':'' ?>" href="<?php echo $next_num; ?><?php echo $order_next; ?>"><i class="icon-arrow-next"></i>next</a>
-
-  </div>
-</div>
+  <a class="button button-prev <?php echo $prev_num === null ? 'button-disabled':'' ?>" href="<?php echo $prev_num; ?><?php echo $order_prev; ?>"><i class="icon-arrow-prev"></i> Prev</a>
+  <a class="button button-next <?php echo $next_num === null ? 'button-disabled':'' ?>" href="<?php echo $next_num; ?><?php echo $order_next; ?>">Next <i class="icon-arrow-next"></i></a>

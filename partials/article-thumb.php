@@ -2,26 +2,23 @@
   /*
    * Standard thumbnail layout
    */
-  $category = category($post->post_type);
+  $categories = get_the_category($post->ID);
 ?>
 
 <div class="blog-post-tile">
-  <div class="blog-post-category">
   <?php 
-    if ($category['parent']):
+    if ( ! empty( $categories ) &&  $categories[0]->name != 'Uncategorised'):
   ?>
-    <a href="<?php echo $category['parentPermalink']; ?>"><?php echo $category['parent']; ?></a><span class="colon">:</span><a href="<?php echo $category['permalink']; ?>"><?php echo $category['name']; ?></a>
-  <?php
-    else:
-    ?>
-      <a href="<?php echo $category['permalink']; ?>"><?php echo $category['name']; ?></a>
+    <div class="blog-pill blog-post-category">
+      <a href="<?php echo esc_url( get_category_link( $categories[0]->term_id ) ) ?>"><?php echo $categories[0]->name; ?></a>
+    </div>
   <?php
     endif;
   ?>
-  </div>
+  
   <a href="<?php echo the_permalink(); ?>" class="blog-post-tile-image">
     <?php get_thumbnail(false, $post->post_type === 'lwa_news' ? true : false, false); ?>  
-    <span class="blog-post-tile-when"><?php when(); ?></span>
+    <span class="blog-pill blog-post-tile-when"><?php when(); ?></span>
   </a>
   <a href="<?php echo the_permalink(); ?>" class="blog-post-tile-title"><?php the_title(); ?></a>
   <div class="blog-post-tile-caption"><?php the_excerpt(); ?></div>

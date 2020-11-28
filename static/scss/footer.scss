@@ -5,8 +5,12 @@
   .footer-wrapper {
     max-width: $maxWidth;
     margin: auto;
-    padding: rem(40);
+    padding: rem(20);
     position: relative;
+
+    @media ($mediaUpMd) {
+      padding: rem(40);
+    }
 
     @media ($mediaUpLg) {
       display: flex;

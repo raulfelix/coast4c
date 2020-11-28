@@ -32,6 +32,7 @@
     "react-waypoint": "^1.2.3"
   },
   "scripts": {
-    "start": "gulp sass:watch"
+    "start": "gulp sass:watch",
+    "build": "gulp sass:build"
   }
 }

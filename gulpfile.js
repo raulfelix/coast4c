@@ -10,7 +10,13 @@ gulp.task('sass', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./static/css'));
 });
- 
+
+gulp.task('sass:build', function () {
+  return gulp.src('./static/scss/master.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('.'));
+});
+
 gulp.task('sass:watch', function () {
   gulp.watch('./static/scss/**/*.scss', gulp.series('sass'));
 });
