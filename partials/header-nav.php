@@ -10,7 +10,7 @@
   <nav class="header-big-nav">
     <button type="button" class="nav-mobile icon-close" id="nav-mobile"></button>
     <?php
-      echo wp_nav_menu('footer-1');
+      echo wp_nav_menu(array( 'menu' => 'header-1' ) );
     ?>
   </nav>
 </div>

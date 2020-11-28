@@ -20,7 +20,7 @@
 				<div class="footer-block">
 					<h3 class="footer-block-title">Company</h3>
 					<?php
-						echo wp_nav_menu('footer-1');
+					  echo wp_nav_menu(array( 'menu' => 'footer-1' ) );
 					?>
 				</div>
 				<div class="footer-block">
