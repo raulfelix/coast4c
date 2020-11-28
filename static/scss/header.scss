@@ -171,17 +171,18 @@ body {
   background-color: transparent;
   position: absolute;
   right: 24px;
-  top: 22px;
+  top: 0;
+  bottom: 0;
   color: black;
   font-size: 16px;
-  font-family: 'Calibre-medium';
+  font-family: $fontFamily;
+  font-weight: $fontWeightMedium;
   display: block;
   z-index: 1;
   display: none;
 }
 
 @media all and (max-width: 768px) {
-
   body {
     padding-top: 60px;
   }
@@ -193,15 +194,18 @@ body {
 
   .header {
     height: 60px;
+
     .header-wrapper {
-      padding: 20px;
+      padding: 18px 20px;
     }
+
     .header-logo {
       width: 150px;
     }
+
     .header-big-nav {
       position: fixed;
-      background-color: rgba(255,255,255,0.95);
+      background-color: rgba(255,255,255,0.98);
       top: 0;
       bottom: 0;
       left: 0;
@@ -215,7 +219,6 @@ body {
 
       opacity: 0;
       visibility: hidden;
-      transition: opacity 800ms ease 0s, visibility 0s 800ms;
 
       .menu {
         flex-direction: column;
@@ -237,7 +240,6 @@ body {
   .nav-mobile-active .header .header-big-nav {
     opacity: 1;
     visibility: visible;
-    transition: opacity 400ms ease 0s, visibility 0s 0s;
   }
 }
 

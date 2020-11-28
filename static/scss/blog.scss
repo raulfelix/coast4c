@@ -25,8 +25,8 @@
   button {
     background-color: $white;
     border-radius: 40px;;
-    border: 2px solid $blue5;
-    color: $blue5;
+    border: 2px solid $yellow5;
+    color: $yellow5;
     height: 40px;
     font-size: 16px;
     font-weight: $fontWeightMedium;
@@ -34,7 +34,7 @@
     margin-right: 16px;
 
     &:hover {
-      background-color: $blue5;
+      background-color: $yellow5;
       color: $white;
       cursor: pointer;
     }
@@ -133,6 +133,7 @@
 
   .blog-date {
     font-size: 14px;
+    margin-bottom: 20px;
   }
 
   .blog-excert p {

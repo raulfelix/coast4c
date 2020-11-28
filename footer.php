@@ -33,6 +33,14 @@
 						<p>POST</p>
 						<div>Cronulla, NSW 2230, Australia</div>
 					</div>
+					<div class="footer-info footer-social">
+						<p>FOLLOW US</p>
+						<div>
+							<a href="https://www.facebook.com/coast4c" target="_blank" class="icon-facebook"></a>
+							<a href="https://www.instagram.com/coast4c/" target="_blank" class="icon-instagram"></a>
+							<a href="https://twitter.com/coast4c" target="_blank" class="icon-twitter"></a>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
