@@ -219,7 +219,7 @@ function generate_share_link($key) {
   switch ($key) {
     case 'Facebook':
       $args = "https://www.facebook.com/sharer/sharer.php?u=" . urlencode(get_the_permalink()) . 
-        "&title=" . urlencode(get_the_title()) . "&og:image=" . urlencode(get_search_thumbnail()[0]);
+        "&title=" . urlencode(get_the_title()) . "&og:image=" . urlencode(get_search_thumbnail()[0]) . "&hashtag=coast4c";
       break;
     case 'Google+':
       $args = "https://plus.google.com/share?url=" . urlencode(get_the_permalink());

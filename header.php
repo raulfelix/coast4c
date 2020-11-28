@@ -14,12 +14,13 @@
   <?php $uri = get_template_directory_uri(); ?>
   <link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/static/images/favicon-96x96.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="<?php echo get_template_directory_uri(); ?>/master.css?ver=2" rel="stylesheet">
 
   <?php if ( is_single() ): ?>
     <meta property="og:title" content="<?php echo the_title() ?>" />
     <meta property="og:site_name" content="Coast 4C"/>
     <meta property="og:url" content="<?php echo get_the_permalink() ?>" />
-    <meta property="fb:app_id" content="161339120705340" />
+    <meta property="fb:app_id" content="852240585593084" />
     <meta property="og:image" content="<?php echo get_search_thumbnail()[0] ?>" />
   <?php endif; ?>
 

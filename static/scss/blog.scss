@@ -13,8 +13,31 @@
   max-width: 900px;
 
   .blog-post-details {
-    color: $grey3;
+    color: $black;
     margin-top: rem(80);
+  }
+}
+
+.blog-post-share {
+  color: $black;
+  margin-bottom: 40px;
+
+  button {
+    background-color: $white;
+    border-radius: 40px;;
+    border: 2px solid $blue5;
+    color: $blue5;
+    height: 40px;
+    font-size: 16px;
+    font-weight: $fontWeightMedium;
+    padding: 0 16px;
+    margin-right: 16px;
+
+    &:hover {
+      background-color: $blue5;
+      color: $white;
+      cursor: pointer;
+    }
   }
 }
 
@@ -90,7 +113,8 @@
 
   .blog-title,
   .blog-excert,
-  .blog-date {
+  .blog-date,
+  .blog-date a  {
     color: white;
   }
 

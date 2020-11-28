@@ -190,7 +190,7 @@ function create_post_type() {
   register_post_type( 'news', $news_post_type );
 }
 
-add_action( 'init', 'create_post_type' );
+// add_action( 'init', 'create_post_type' );
 
 
 // --------------------------------------------  
