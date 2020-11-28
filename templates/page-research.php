@@ -37,7 +37,7 @@
           while ( $wp_query->have_posts() ): 
             $wp_query->the_post();
       ?>
-      <?php get_template_part('partials/article', 'thumb'); ?>
+      <?php get_template_part('partials/research', 'thumb'); ?>
       <?php 
           endwhile;
         endif;
