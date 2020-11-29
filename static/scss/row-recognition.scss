@@ -31,10 +31,13 @@
     }
   }
 
-
+  .wp-block-image {
+    margin-top: rem(40);
+    margin-bottom: 0;
+  }
   h2 {
     font-size: rem(42);
-    margin-bottom: rem(60);
+    margin-bottom: rem(20);
     max-width: 80%;
     line-height: rem(55);
   }
@@ -42,5 +45,6 @@
   p {
     font-size: rem(18);
     line-height: rem(25);
+    margin-bottom: 0;
   }
 }

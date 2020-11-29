@@ -25,20 +25,23 @@
 
 .blog-post-share {
   color: $black;
-  margin-bottom: 40px;
-  border-top: 2px solid $grey1;
-  padding-top: 20px;
+  margin-bottom: 32px;
+  padding-top: rem(40);
+
+  h3 {
+    margin-bottom: 12px;
+  }
 
   button {
     background-color: $white;
-    border-radius: 40px;;
-    border: 2px solid $black;
+    border-radius: 40px;
+    border: 1px solid $grey1;
     color: $black;
-    height: 40px;
-    font-size: 16px;
+    height: 34px;
+    font-size: 12px;
     font-weight: $fontWeightMedium;
     padding: 0 16px;
-    margin-right: 16px;
+    margin-right: 8px;
 
     &:hover {
       background-color: $grey1;
@@ -78,10 +81,6 @@
     height: 500px;
   }
 
-  @media ($mediaUpLg) {
-    height: 580px;
-  }
-
   &:before {
     content: '';
     background-image: linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.20) 57%, rgba(0,0,0,0.60) 99%);
@@ -118,25 +117,6 @@
     margin-bottom: rem(20);
   }
 
-  .blog-title,
-  .blog-excert,
-  .blog-date,
-  .blog-date a  {
-    color: white;
-  }
-
-  .blog-title {
-    color: white;
-    font-size: 24px;
-    font-weight: $fontWeightMedium;
-    margin-bottom: rem(4);
-    line-height: rem(30);
-
-    @media ($mediaUpMd) {
-      font-size: 40px;
-      line-height: rem(50);
-    }
-  }
 
   .blog-date {
     font-size: 14px;
@@ -168,6 +148,13 @@
   }
 }
 
+
+.blog-title {
+  font-weight: $fontWeightMedium;
+    font-size: 40px;
+    line-height: rem(50);
+    margin-bottom: rem(40);
+}
 
 .blog-container {
   padding-top: rem(80);
@@ -212,4 +199,61 @@
   flex-wrap: wrap;
   margin-left: -12px;
   margin-right: -12px;
+}
+
+.blog-post-side {
+  .blog-category,
+  .blog-date {
+    margin-bottom: 16px;
+  }
+
+  .blog-author {
+    strong {
+      font-weight: $fontWeightMedium;
+    }
+  }
+}
+
+.blog-post-columns {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+
+  @media ($mediaUpMd) {
+    flex-direction: row;
+  }
+
+  .blog-post-main {
+    flex-basis: 70%;
+    margin-top: rem(40);
+    @media ($mediaUpMd) {
+      margin-top: rem(0);
+    }
+
+    .blog-title {
+      display: none;
+      @media ($mediaUpMd) {
+        display: block;
+      }
+    }
+  }
+
+  .blog-post-side {
+    flex-basis: 30%;
+    padding-right: 40px;
+
+    .blog-title {
+      display: block;
+      @media ($mediaUpMd) {
+        display: none;
+      }
+    }
+
+    .blog-post-share {
+      display: none;
+      @media ($mediaUpMd) {
+        display: block;
+      }
+    }
+  }
 }

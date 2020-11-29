@@ -1,5 +1,5 @@
 <div class="blog-post-share">
-  <h3>Share this post on</h3>
+  <h3>Share post on</h3>
   <?php echo generate_share_link('Facebook') ?>
   <?php echo generate_share_link('Twitter') ?>
 </div>
