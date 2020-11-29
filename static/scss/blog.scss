@@ -26,12 +26,14 @@
 .blog-post-share {
   color: $black;
   margin-bottom: 40px;
+  border-top: 2px solid $grey1;
+  padding-top: 20px;
 
   button {
     background-color: $white;
     border-radius: 40px;;
-    border: 2px solid $yellow5;
-    color: $yellow5;
+    border: 2px solid $black;
+    color: $black;
     height: 40px;
     font-size: 16px;
     font-weight: $fontWeightMedium;
@@ -39,9 +41,9 @@
     margin-right: 16px;
 
     &:hover {
-      background-color: $yellow5;
-      color: $white;
+      background-color: $grey1;
       cursor: pointer;
+      color: $black;
     }
   }
 }
@@ -49,7 +51,7 @@
 .blog-pill {
   background: white;
   border-radius: 32px;
-  border: 1px solid $grey4;
+  border: 1px solid rgb(217, 217, 217);
   color: $black;
   display: inline-block;
   height: 34px;

@@ -4,16 +4,13 @@
  */
 
   get_header();
-
 ?>
   <?php
     if (have_posts()): while (have_posts()): the_post();
       get_template_part( 'partials/article', 'content' );
     endwhile; endif;
   ?>
-  
+
 <?php
-  wp_enqueue_script( 'single' );
-  wp_enqueue_script( 'bundle' );
   get_footer(); 
 ?>

@@ -1,0 +1,66 @@
+
+.blog-research {
+
+  .grid {
+    max-width: 900px;
+  }
+
+  .blog-post-details {
+    color: $black;
+    margin-top: rem(80);
+  }
+
+  .blog-research-image {
+    background-size: 100% auto;
+    height: 80px;
+    max-width: 200px;
+    border-radius: 80px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .blog-research-author {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: $fontWeightMedium;
+  }
+
+  .blog-research-title {
+    margin-bottom: rem(30);
+    @media ($mediaUpMd) {
+      margin-bottom: rem(60);
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: $fontWeightMedium;
+      line-height: rem(40);
+      @media ($mediaUpMd) {
+        font-size: 40px;
+        line-height: rem(50);
+      }
+    }
+  }
+
+  .wp-block-file {
+    a:first-child {
+      background-color: #59ABF7;
+      border: 4px solid #3199F9;
+      border-radius: 8px;
+      color: $white;
+      font-size: 16px;
+      font-weight: $fontWeightMedium;
+      margin: 0;
+      min-width: 200px;
+      padding: rem(16) rem(24);
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+
+    }
+    a:last-child {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+}
