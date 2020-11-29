@@ -11,14 +11,30 @@
       flex-direction: column;
       .wp-block-column {
         flex-basis: 100% !important;
+        margin: 0;
         width: 100%;
+
+        .recognition-links {
+          width: 50%;
+        }
       }
     }
   }
 
+  @media ($mediaDownSm) {
+    .wp-block-columns {
+      .wp-block-column {
+        .recognition-links {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+
   h2 {
     font-size: rem(42);
-    margin-bottom: rem(20);
+    margin-bottom: rem(60);
     max-width: 80%;
     line-height: rem(55);
   }

@@ -14,7 +14,6 @@
   <?php $uri = get_template_directory_uri(); ?>
   <link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/static/images/favicon-96x96.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="<?php echo get_template_directory_uri(); ?>/master.css?ver=2" rel="stylesheet">
 
   <?php if ( is_single() ): ?>
     <meta property="og:title" content="<?php echo the_title() ?>" />
