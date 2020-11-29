@@ -5,11 +5,11 @@
 </div>
 
 <script type="text/javascript">
-$('button').click(function(ev) {
-  window.open(
-      $(this).data('href'),
-      '',
-      'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'
-    );
-  });
+  $('.button-social').click(function(ev) {
+    window.open(
+        $(this).data('href'),
+        '',
+        'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600'
+      );
+    });
 </script>
