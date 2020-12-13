@@ -5,10 +5,18 @@
   .wp-block-group__inner-container {
     max-width: $maxWidth;
     margin: auto;
+    position: relative;
   }
 
   .wp-block-columns {
     margin-bottom: 0;
+  }
+
+  figure {
+    border-radius: 16px;
+    overflow: hidden;
+    opacity: 0;
+    position: relative;
   }
 
   @media ($mediaDownMd) {
@@ -40,8 +48,12 @@
   background-position: center;
   background-size: 80% auto;
   border-radius: rem(16);
-  position: relative;
   padding-top: 56%;
+
+  position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 11;
 
   img {
     position: absolute;

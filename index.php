@@ -18,5 +18,8 @@
 ?>
 
 <script type="text/javascript">
-  $('.home-page-gallery .blocks-gallery-grid').slick({ dots: true });
+  $('.coast-video-overlay').click(function() {
+    $(this).css('display', 'none').next().css('opacity', '1');
+  });
+  // $('.home-page-gallery .blocks-gallery-grid').slick({ dots: true });
 </script>
