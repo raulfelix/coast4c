@@ -19,7 +19,9 @@
 
 <script type="text/javascript">
   $('.coast-video-overlay').click(function() {
+    var myVideo = document.getElementById("hero-video"); 
+    myVideo.play(); 
+
     $(this).css('display', 'none').next().css('opacity', '1');
   });
-  // $('.home-page-gallery .blocks-gallery-grid').slick({ dots: true });
 </script>
