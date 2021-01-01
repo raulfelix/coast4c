@@ -1,13 +1,14 @@
 .card-info {
-  background-color: $blue2;
-  background-image: url('../images/fishnet.png');
-  background-size: 100% auto;
-  border-radius: 16px;
-  padding: rem(40) rem(40) rem(1) rem(40);
+  padding: rem(40);
 
-  h3 {
-    font-size: rem(42);
-    font-weight: $fontWeightMedium;
+  .wp-block-group__inner-container {
+    max-width: $maxWidth;
+    margin: auto;
+    padding: rem(40) rem(40) 0 rem(40);
+  }
+
+  h2 {
+    font-size: rem(38);
     line-height: rem(55);
     margin-bottom: rem(32);
   }
@@ -29,23 +30,13 @@
     }
   }
 
-  .wp-block-image {
-    margin: 0;
-    max-width: 200px;
-    position: relative;
-  }
-
   .has-huge-font-size {
-    font-size: rem(100);
+    font-size: rem(80);
     font-weight: $fontWeightSemiBold;
     line-height: rem(80);
   }
 
   .card-info-intro {
     margin-bottom: rem(40);
-  }
-
-  @media ($mediaDownMd) {
-    
   }
 }

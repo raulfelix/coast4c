@@ -39,11 +39,6 @@
 
   .track-record-video {
     box-shadow: rgba(57, 16, 133, 0.3) 0px 8px 15px;
-    margin-top: 0;
-
-    @media ($mediaUpLg) {
-      margin-top: rem(-140);
-    }
 
     .wp-block-embed__wrapper {
       overflow: hidden;

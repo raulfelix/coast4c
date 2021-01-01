@@ -19,9 +19,9 @@
 
 <script type="text/javascript">
   $('.coast-video-overlay').click(function() {
-    var myVideo = document.getElementById("hero-video"); 
-    myVideo.play(); 
-
+    // var myVideo = document.getElementById("hero-video"); 
+    // myVideo.play(); 
     $(this).css('display', 'none').next().css('opacity', '1');
+    $("iframe")[0].src += "&autoplay=1";
   });
 </script>

@@ -2,7 +2,7 @@
   <div class="header-wrapper">
   <div class="header-logo">
     <a href="<?php echo get_home_url(); ?>">
-      <img src="<?php echo get_template_directory_uri(); ?>/static/images/logo_inline.svg" alt="" />
+      <img src="<?php echo get_template_directory_uri(); ?>/static/images/logo_stacked.svg" alt="" />
     </a>
   </div>
   <button type="button" class="nav-mobile-menu" id="nav-mobile-menu">Menu</button>
@@ -10,7 +10,7 @@
   <nav class="header-big-nav">
     <button type="button" class="nav-mobile icon-close" id="nav-mobile"></button>
     <?php
-      echo wp_nav_menu(array( 'menu' => 'header-1' ) );
+      echo wp_nav_menu(array( 'menu' => 'header-1', 'container' => false ) );
     ?>
   </nav>
 </div>

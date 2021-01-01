@@ -11,14 +11,18 @@ body {
   z-index: 100;
   transition: box-shadow 200ms ease;
 
+  ul {
+    margin: 0;
+  }
+
   .header-wrapper {
     display: flex;
-    padding: rem(32) rem(40);
+    padding: rem(16) rem(40);
     position: relative;
   }
 
   .header-logo {
-    width: 200px;
+    width: rem(100);
     img {
       width: 100%;
     }
@@ -26,8 +30,9 @@ body {
 
   .header-big-nav {
     position: absolute;
-    right: 40px;
-    top: 30px;
+    bottom: 0;
+    right: rem(40);
+    top: 0;
 
     a {
       color: $text;
@@ -35,7 +40,7 @@ body {
       text-decoration: none;
 
       &:hover {
-        color: $yellow4;
+        color: $blue5;
       }
     }
 
@@ -45,13 +50,53 @@ body {
       .menu-item {
         color: $grey4;
         list-style: none;
-        margin-left: rem(32);
+        margin: 0;
+        padding: 0 16px;
+        position: relative;
         margin-bottom: 0;
+        line-height: 90px;
+      }
+
+      .menu-item-has-children {
+        :after {
+          content: '';
+        }
+      }
+
+      .menu-item:hover .sub-menu {
+        display: block;
       }
 
       .current_page_item a {
         color: $grey5;
         font-weight: $fontWeightBold;
+      }
+    }
+
+    .sub-menu {
+      background-color: $white;
+      box-shadow: rgba(57, 16, 133, 0.08) 0px 8px 15px;
+      border: 1px solid #f0f0f0;
+      border-radius: 12px;
+      display: none;
+      min-width: 230px;
+      padding: 0;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 80px;
+
+      .menu-item {
+        line-height: rem(24);
+        margin: 0;
+        padding: rem(16);
+
+        a {
+          font-weight: normal;
+          &:hover {
+            color: $blue5;
+          }
+        }
       }
     }
   }
@@ -184,7 +229,7 @@ body {
 
 @media all and (max-width: 768px) {
   body {
-    padding-top: 60px;
+    padding-top: rem(70);
   }
 
   .nav-mobile-menu,
@@ -193,14 +238,12 @@ body {
   }
 
   .header {
-    height: 60px;
-
     .header-wrapper {
       padding: 18px 20px;
     }
 
     .header-logo {
-      width: 150px;
+      width: rem(60);
     }
 
     .header-big-nav {
@@ -225,8 +268,22 @@ body {
 
         .menu-item {
           display: block;
+          line-height: 1;
           margin-left: 0;
           padding: 20px;
+        }
+
+        .sub-menu {
+          box-shadow: none;
+          border: none;
+          display: block;
+          margin-top: rem(10);
+          position: relative;
+          top: auto;
+
+          a {
+            font-size: 24px;
+          }
         }
 
         a {
