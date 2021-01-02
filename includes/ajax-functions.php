@@ -181,31 +181,4 @@ function enc($text) {
   return html_entity_decode($text, ENT_COMPAT, 'UTF-8');
 }
 
-
-// ------------------------ 
-// instagram ajax
-// ------------------------
-function get_instagram_feed($next_max_id) {
-  $access_token = get_option( 'instagram_access_token', 'nothing' );
-  $url = 'https://api.instagram.com/v1/users/self/feed?access_token=' . $access_token . '&count=60';
-  
-  if ($next_max_id) {
-    $url = $url . '&max_id=' . $next_max_id;
-  }
-
-  $ch = curl_init();
-  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Accept: application/json'));
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-  curl_setopt($ch, CURLOPT_URL, $url);
-  $jsonData = curl_exec($ch);
-
-  if (false === $jsonData) {
-    throw new Exception("Error: _makeOAuthCall() - cURL error: " . curl_error($ch));
-  }
-  
-  curl_close($ch);
-  return json_decode($jsonData);
-}
-
 ?>

@@ -1,8 +1,7 @@
-.about-hero {
+.page-hero {
   background-color: $yellow1;
-  padding: rem(100) rem(40) rem(40) rem(40);
 
-  h2 {
+  h1 {
     font-size: rem(42);
     line-height: rem(55);
     margin-bottom: rem(32);
@@ -12,9 +11,11 @@
     font-size: rem(18);
   }
 
+  .page-hero-container,
   .wp-block-group__inner-container {
     max-width: $maxWidth;
     margin: auto;
+    padding: rem(100) rem(40) rem(40) rem(40);
   }
 
   .wp-block-columns {
@@ -29,18 +30,5 @@
         width: 100%;
       }
     }
-  }
-}
-
-.about-hero-opportunity {
-  padding: rem(100) rem(40);
-
-  .wp-block-group__inner-container {
-    max-width: $maxWidth;
-    margin: auto;
-  }
-
-  .wp-block-column:first-child {
-    padding-right: 30px;
   }
 }

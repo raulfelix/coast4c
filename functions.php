@@ -77,14 +77,6 @@ add_action('admin_enqueue_scripts', 'enqueue_custom_admin_scripts');
 function add_scripts() {
 
   wp_register_style( 'style', get_template_directory_uri() . '/static/css/master.css?ver=' . rand(111,999), null, null, 'all' );
-
-  // wp_register_script( 'global', get_template_directory_uri() . '/static/dist/js/9e81a7e5d3e8.global.min.js', null, null, true );
-  // wp_register_script( 'gallery', get_template_directory_uri() . '/static/dist/js/27323ae010fb.gallery.min.js', array('single'), null, true );
-  
-  // wp_register_script( 'single', get_template_directory_uri() . '/build/dist/js/3b7d199bd846.single.entry.js', null, null, true );
-  // wp_register_script( 'everywhere', get_template_directory_uri() . '/build/dist/js/fa7b740abd72.everywhere.entry.js', null, null, true );
-  // wp_register_script( 'index', get_template_directory_uri() . '/build/dist/js/e3a1443bfb24.index.entry.js', null, null, true );
-  // wp_register_script( 'category', get_template_directory_uri() . '/build/dist/js/1e748c29df12.category.entry.js', null, null, true );
   
   wp_localize_script( 'global', 'ajaxEndpoint', array(
     'url' => admin_url( 'admin-ajax.php' ),
@@ -92,9 +84,6 @@ function add_scripts() {
   ));   
 
   wp_enqueue_style( 'style' );
-  // wp_enqueue_script( 'global' );
-  // wp_enqueue_script( 'everywhere' );
-
 }
 add_action( 'wp_enqueue_scripts', 'add_scripts', 999 );
 
@@ -133,33 +122,35 @@ add_filter('the_content', 'filter_ptags_on_images');
 // --------------------------------- 
 // register custom taxonomies
 //
-// news: news_tax
 // postpending to avoid name clashes
 // --------------------------------- 
 function register_custom_taxonomies() {
   $labels = array(
-    'name'              => _x( 'Categories', 'taxonomy general name' ),
-    'singular_name'     => _x( 'Category', 'taxonomy singular name' ),
-    'search_items'      => __( 'Search Categories' ),
-    'all_items'         => __( 'All Categories' ),
-    'parent_item'       => __( 'Parent Category' ),
-    'parent_item_colon' => __( 'Parent Category:' ),
-    'edit_item'         => __( 'Edit Category' ), 
-    'update_item'       => __( 'Update Category' ),
-    'add_new_item'      => __( 'Add New Category' ),
-    'new_item_name'     => __( 'New Category' ),
-    'menu_name'         => __( 'Categories' ),
+    'name'              => _x( 'Partners taxonomy', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Partners taxonomy', 'taxonomy singular name' ),
+    'search_items'      => __( 'Search Partners taxonomy' ),
+    'all_items'         => __( 'All Partners taxonomy' ),
+    'parent_item'       => __( 'Parent Partner taxonomy' ),
+    'parent_item_colon' => __( 'Parent Partner taxonomy:' ),
+    'edit_item'         => __( 'Edit Partner taxonomy' ), 
+    'update_item'       => __( 'Update Partner taxonomy' ),
+    'add_new_item'      => __( 'Add New Partner taxonomy' ),
+    'new_item_name'     => __( 'New Partner taxonomy' ),
+    'menu_name'         => __( 'Partners taxonomy' ),
   );
 
   $args = array(
     'labels' => $labels,
     'hierarchical' => true,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
     'rewrite' => array (
       'hierarchical' => true
     )
   );
 
-  register_taxonomy( 'news_tax', 'news', $args );
+  register_taxonomy( 'partners_tax', array('partners'), $args );
 }
 
 add_action( 'init', 'register_custom_taxonomies' );
@@ -168,63 +159,28 @@ add_action( 'init', 'register_custom_taxonomies' );
 // ------------------------------ 
 // register custom post types
 //
-// news: news
 // ------------------------------ 
 function create_post_type() {
-  $news_post_type = array(
+  $partner_post_type = array(
     'labels' => array(
-      'name' => __( 'News posts' ),
-      'singular_name' => __( 'News' ),
+      'name' => __( 'Partners posts' ),
+      'singular_name' => __( 'Partner' ),
     ),
-    'description' => __( 'News articles are defined within this type' ),
+    'description' => __( 'Partners articles are defined within this type' ),
     'hierarchical' => true,
     'show_ui' => true,
     'public' => true,
-    'has_archive' => true,
-    'rewrite' => array('slug' => 'news/%news_tax%', 'with_front' => false),
-    'menu_position' => 5,
-    'supports' => array('title', 'editor', 'thumbnail', 'author', 'revisions' ),
-    'taxonomies' => array( 'news_tax', 'subtitle', 'carousel' )
+    'has_archive' => false,
+    'menu_position' => 4,
+    'rewrite' => array('slug' => 'partners', 'with_front' => true),
+    'supports' => array('title', 'editor', 'thumbnail', 'revisions' ),
+    'taxonomies' => array('partners_tax')
   );
 
-  register_post_type( 'news', $news_post_type );
+  register_post_type( 'partners', $partner_post_type );
 }
 
-// add_action( 'init', 'create_post_type' );
-
-
-// --------------------------------------------  
-// customisation: custom post type permalink 
-//
-// make sure post permalinks follow structure: 
-// post_type/%custom_taxonomy%/%postname%
-// -------------------------------------------- 
-function custom_post_type_permastruct($link, $post) {
-  if ($post->post_type === 'lwa_feature') {
-    if ($cats = get_the_terms($post->ID, 'featured_tax'))
-      $link = str_replace('%featured_tax%', array_pop($cats)->slug, $link);
-      return $link;
-  } 
-  else if ($post->post_type === 'news') {
-    if ($cats = get_the_terms($post->ID, 'news_tax'))
-      $link = str_replace('%news_tax%', array_pop($cats)->slug, $link);
-      return $link;
-  } else {
-    return $link;
-  }
-}
-add_filter('post_type_link', 'custom_post_type_permastruct', 10, 2);
-
-
-// ----------------------------------
-// plugin: BAW post view count
-// only keep the total view count
-// ----------------------------------
-function remove_timing_for_bawpvc( $timings ) {
-    return array( 'all' => '' );
-}
-add_filter( 'baw_count_views_timings', 'remove_timing_for_bawpvc' );
-
+add_action( 'init', 'create_post_type' );
 
 function mytheme_custom_excerpt_length( $length ) {
   return 20;
@@ -235,64 +191,6 @@ function new_excerpt_more( $more ) {
 	return '';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
-
-
-// -------------------------- 
-// plugin: attachments
-// --------------------------
-add_filter( 'attachments_default_instance', '__return_false' ); // disable the default instance
-function my_attachments( $attachments ) {
-  $fields = array( 
-    array(
-      'name'      => 'caption',                       // unique field name
-      'type'      => 'text',                          // registered field type
-      'label'     => __( 'Caption', 'attachments' ),  // label to display
-      'default'   => 'caption',                       // default value upon selection
-    )
-  );
-
-  $args = array(
-
-    // title of the meta box (string)
-    'label'         => 'Gallery Images',
-
-    // all post types to utilize (string|array)
-    'post_type'     => array( 'lwa_feature', 'lwa_news'),
-
-    // meta box position (string) (normal, side or advanced)
-    'position'      => 'advanced',
-
-    // meta box priority (string) (high, default, low, core)
-    'priority'      => 'high',
-
-    // allowed file type(s) (array) (image|video|text|audio|application)
-    'filetype'      => array('image'),
-
-    // include a note within the meta box (string)
-    'note'          => '',
-
-    // append to the list
-    'append'        => true,
-
-    // text for 'Attach' button in meta box (string)
-    'button_text'   => __( 'Add to gallery', 'attachments' ),
-
-    // text for modal 'Attach' button (string)
-    'modal_text'    => __( 'Add', 'attachments' ),
-
-    // which tab should be the default in the modal (string) (browse|upload)
-    'router'        => 'browse',
-
-    'post_parent'   => true,
-
-    // fields array
-    'fields'        => $fields,
-
-  );
-
-  $attachments->register( 'my_attachments', $args ); // unique instance name
-}
-add_action( 'attachments_register', 'my_attachments' );
 
 
 // -------------------------- 
