@@ -35,12 +35,14 @@ body {
     top: 0;
 
     a {
+      border-radius: 8px;
       color: $text;
       font-size: rem(16);
+      padding: rem(8) rem(12);
       text-decoration: none;
 
       &:hover {
-        color: $blue5;
+        background-color: $blue1;
       }
     }
 
@@ -51,7 +53,7 @@ body {
         color: $grey4;
         list-style: none;
         margin: 0;
-        padding: 0 16px;
+        padding: 0 rem(8);
         position: relative;
         margin-bottom: 0;
         line-height: 90px;
@@ -65,11 +67,6 @@ body {
 
       .menu-item:hover .sub-menu {
         display: block;
-      }
-
-      .current_page_item a {
-        color: $grey5;
-        font-weight: $fontWeightBold;
       }
     }
 
@@ -92,10 +89,8 @@ body {
         padding: rem(16);
 
         a {
+          display: block;
           font-weight: normal;
-          &:hover {
-            color: $blue5;
-          }
         }
       }
     }
@@ -104,101 +99,6 @@ body {
 
 .has-scrolled .header {
   box-shadow: rgba(57, 16, 133, 0.08) 0px 8px 15px;
-}
-
-.nav {
-  position: absolute;
-  top: rem(25);
-  left: 0;
-  right: 0;
-  z-index: 100000;
-  
-  &.nav-active {
-    .nav-menu .icon-menu {
-      @extend %icon-close;
-      display: inline-block;
-    }
-  }
-  
-  &.search-active {
-    .nav-search .icon-search {
-      @extend %icon-close;
-    }
-  }
-  
-  .nav-primary-bg {
-    background-color: rgba(0,0,0,0.6);
-    height: rem(60);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-  
-  .nav-item {
-    color: $white;
-    font-size: 24px;
-    line-height: rem(60);
-    text-align: center;
-    width: rem(40);
-    position: relative;
-    z-index: 100;
-    @extend %pull-right;
-  }
-
-  .nav-links {
-    font-size: rem(24);
-    display: none;
-    @extend %absolute;
-    left: 50%;
-    top: rem(100);
-    margin-left: rem(-194);
-    width: rem(388);
-    text-align: center;
-
-    li {
-      list-style: none;
-    }
-
-    a {
-      color: $white;
-      font-family: $font-secondary;
-      text-transform: uppercase;
-    }
-  }
-  
-  .nav-touch-toggle {
-    display: none;
-  }
-  
-  .nav-links-secondary {
-    display: none;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: rem(60);
-    background-color: rgba(255,255,255,0.8);
-    
-    &:hover {
-      display: block;
-    }
-    
-    & > div {
-      padding-left: rem(112);
-    }
-    
-    a {
-      color: $black;
-      font-size: rem(20);
-      margin: 0 rem(40) 0 0;
-      padding: 0;
-      
-      &:hover {
-        color: $highlight;
-        text-decoration: underline;
-      }
-    }
-  }
 }
 
 .nav-mobile {

@@ -1,7 +1,7 @@
 <?php
 /**
- * Template Name: products
- * The Template for displaying products
+ * Template Name: faq
+ * The Template for displaying faqs
  */
 
 get_header(); ?>
