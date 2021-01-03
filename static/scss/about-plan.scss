@@ -1,5 +1,6 @@
 .about-plan,
-.about-community {
+.about-community,
+.row-information {
   padding: rem(40) rem(40) rem(100) rem(40);
 
   .wp-block-group__inner-container {
@@ -11,5 +12,53 @@
     font-size: rem(42);
     line-height: rem(55);
     margin-bottom: rem(32);
+  }
+}
+
+.row-blob {
+  background-image: url('../images/purple-blob.png');
+  background-repeat: no-repeat;
+  background-size: 150% auto;
+  background-position: center 5%;
+  margin-bottom: 80px;
+
+  @media ($mediaUpLg) {
+    background-size: 85% auto;
+    background-position: center;
+  }
+
+  .wp-block-column {
+    background-color: $white;
+    border-radius: 16px;
+    border: 1px solid #ECECEC;
+    padding: rem(16);
+    margin-bottom: rem(20);
+
+    h2 {
+      background-color: #F9F0FF;
+      border-radius: 32px;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: $fontWeightNormal;
+      line-height: rem(40);
+      margin-bottom: rem(16);
+      padding: 0 rem(16);
+    }
+
+    p {
+      font-size: rem(16);
+      line-height: rem(26);
+      margin-bottom: rem(20);
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    ul li {
+      font-size: 14px;
+      line-height: rem(20);
+      margin-left: rem(24);
+    }
   }
 }

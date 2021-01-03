@@ -77,7 +77,7 @@ body {
       border-radius: 12px;
       display: none;
       min-width: 230px;
-      padding: 0;
+      padding: rem(8) 0;
       position: absolute;
       left: 0;
       right: 0;
@@ -86,7 +86,6 @@ body {
       .menu-item {
         line-height: rem(24);
         margin: 0;
-        padding: rem(16);
 
         a {
           display: block;
@@ -94,6 +93,11 @@ body {
         }
       }
     }
+
+    .menu-item:last-child  .sub-menu {
+      left: auto;
+      right: 0;
+    } 
   }
 }
 
@@ -170,28 +174,35 @@ body {
           display: block;
           line-height: 1;
           margin-left: 0;
-          padding: 20px;
+          padding: 0;
         }
 
         .sub-menu {
           box-shadow: none;
           border: none;
           display: block;
-          margin-top: rem(10);
+          margin-top: 0;
+          padding: 0;
           position: relative;
           top: auto;
 
           a {
-            font-size: 24px;
+            font-size: 20px;
           }
         }
 
         a {
-          font-size: 28px;
-          font-weight: 500;
+          display: block;
+          font-size: 20px;
+          font-weight: normal;
         }
       }
     }
+  }
+
+  .nav-mobile-active {
+    overflow: hidden;
+    position: fixed;
   }
 
   .nav-mobile-active .header .header-big-nav {
