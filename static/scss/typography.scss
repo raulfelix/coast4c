@@ -38,7 +38,7 @@ a {
   text-decoration: underline;
 
   &:hover {
-    color: $yellow5;
+    color: $blue4;
   }
 }
 
@@ -58,6 +58,13 @@ blockquote {
 
 .typography-statement-wrapper {
   max-width: 66%;
+
+  h2 {
+    font-size: rem(42);
+    line-height: rem(55);
+    margin-bottom: rem(32);
+  }
+
   @media ($mediaDownSm) {
     max-width: 100%;
   }

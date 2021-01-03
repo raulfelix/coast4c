@@ -1,5 +1,3 @@
-.about-plan,
-.about-community,
 .row-information {
   padding: rem(40) rem(40) rem(100) rem(40);
 
@@ -22,9 +20,18 @@
   background-position: center 5%;
   margin-bottom: 80px;
 
-  @media ($mediaUpLg) {
-    background-size: 85% auto;
+  @media ($mediaUpMd) {
+    background-size: 95% auto;
     background-position: center;
+  }
+
+  @media ($mediaUpLg) {
+    background-size: 90% auto;
+    background-position: center;
+  }
+
+  @media ($mediaUpXl) {
+    background-size: 80% auto;
   }
 
   .wp-block-column {
