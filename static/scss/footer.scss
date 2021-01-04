@@ -12,9 +12,9 @@
       padding: rem(40);
     }
 
-    @media ($mediaUpLg) {
+    @media ($mediaUpXl) {
       display: flex;
-      & > div {
+      & > div:first-child {
         width: 50%;
       }
     }
@@ -22,9 +22,18 @@
 
   .footer-content {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     font-size: rem(14);
     padding-top: rem(30);
+
+    @media ($mediaUpXl) {
+      padding-left: rem(40);
+    }
+
+    @media ($mediaUpMd) {
+      flex-wrap: nowrap;
+    }
 
     @media ($mediaUpSm) {
       display: flex;

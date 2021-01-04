@@ -24,6 +24,12 @@
 					?>
 				</div>
 				<div class="footer-block">
+					<h3 class="footer-block-title">Learn</h3>
+					<?php
+					  echo wp_nav_menu(array( 'menu' => 'footer-learn' ) );
+					?>
+				</div>
+				<div class="footer-block">
 					<h3 class="footer-block-title">Contact</h3>
 					<div class="footer-info">
 						<p>EMAIL</p>
