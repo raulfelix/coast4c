@@ -31,10 +31,22 @@
     }
   }
 
-  .wp-block-image {
+  .recognition-card {
     margin-top: rem(40);
-    margin-bottom: 0;
+
+    .wp-block-image {
+      margin-bottom: rem(10);
+    }
+
+    p {
+      margin-bottom: rem(4);
+    }
+
+    p a {
+      font-size: rem(14);
+    }
   }
+
 
   h2 {
     font-size: rem(42);
@@ -46,6 +58,5 @@
   p {
     font-size: rem(18);
     line-height: rem(25);
-    margin-bottom: 0;
   }
 }
