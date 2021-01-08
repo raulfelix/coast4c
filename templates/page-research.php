@@ -14,7 +14,7 @@
         <div class="blog-post-title">
           <h1 class="blog-title"><?php the_title(); ?></h1>
           <div class="blog-excert">
-            <?php the_excerpt(); ?>
+            <?php the_content(); ?>
           </div>
         </div>
     <?php
@@ -23,13 +23,12 @@
 
     <div class="blog-post-tiles">
       <?php
-        // get order and default to date otherwise by popularity
-        $order = isset($_GET['orderby']) ? $_GET['orderby'] : 'desc';
-
         $args = Array(
-          'posts_per_page' => 12,
-          'paged' => $paged,
-          'category__in' => array(7) 
+          'category__in' => array(7),
+          'post_status' => 'publish',
+          'orderby' => 'date',
+          'order'   => 'DESC',
+          'no_found_rows' => true
         );
         $wp_query = new WP_Query( $args );
         $idx = 1;
@@ -42,9 +41,6 @@
           endwhile;
         endif;
       ?>
-    </div>
-    <div class="blog-post-tiles-pagination">
-      <?php get_template_part('partials/module', 'paginate-links'); ?>
     </div>
   </div>
  
