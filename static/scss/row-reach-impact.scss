@@ -2,19 +2,13 @@
   background-color: $yellow1;
   padding: rem(60) rem(40);
 
-  .wp-block-group__inner-container {
+  & > .wp-block-group__inner-container {
     max-width: $maxWidth;
     margin: auto;
   }
-
   .wp-block-column {
-    @media ($mediaDownSm) {
-      flex-basis: 100% !important;
-      margin: 0 auto;
-      max-width: rem(400);
-    }
+    flex-basis: 100%;
   }
-
   h2 {
     font-size: rem(42);
     line-height: rem(55);

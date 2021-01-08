@@ -78,3 +78,16 @@ hr {
   border: 1px solid #f5f5f5;
   margin: rem(40) 0;
 }
+
+.page-callout {
+  background-color: $purple1;
+  border-radius: rem(16);
+  font-weight: $fontWeightMedium;
+  margin-bottom: rem(20);
+  padding: rem(20);
+}
+
+.wp-block-image figcaption {
+  font-size: rem(14);
+  text-align: center;
+}

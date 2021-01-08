@@ -5,14 +5,21 @@
  */
 
 get_header(); ?>
-<div class="grid">
-  <h1 class="page-title"><?php echo get_the_title(); ?></h1>
-<?php
-  if (have_posts()): while (have_posts()): the_post();
-    the_content();
-  endwhile; endif;
-?>
+
+<div class="page">
+  <div class="page-container">
+    <h1 class="page-title"><?php the_title(); ?></h1>
+  </div>
 </div>
+
+<div class="grid">
+  <?php
+    if (have_posts()): while (have_posts()): the_post();
+      the_content();
+    endwhile; endif;
+  ?>
+</div>
+
 <?php
   get_footer(); 
 ?>

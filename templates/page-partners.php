@@ -36,7 +36,10 @@
         <div class="partner-tile">
           <div class="partner-tile-wrap">
             <div class="partner-tile-image">
-              <?php get_thumbnail(false, false, false); ?>
+              <?php 
+                $img_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'original');
+              ?>
+              <img src="<?php echo $img_url[0] ?>" />
             </div>
             <div class="partner-tile-title"><?php the_title(); ?></div>
             <div class="partner-tile-category"><?php echo $term_list[0] ?></div>
