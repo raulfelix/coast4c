@@ -37,21 +37,11 @@
     align-items: center;
     justify-content: center;
     margin-bottom: rem(16);
-    height: rem(100);
-    width: rem(100);
+    min-height: 140px;
 
     img {
       text-align: center;
-      width: rem(100);
-    }
-
-    @media ($mediaUpMd) {
-      height: rem(140);
-      width: rem(140);
-
-      img {
-        width: rem(140);
-      }
+      width: 100%;
     }
   }
 

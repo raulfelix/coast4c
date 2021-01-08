@@ -18,10 +18,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 42px;
 }
 
-p, li {
+p, li, h4 {
   font-size: rem(18);
   line-height: rem(28);
   margin-bottom: rem(28);
+}
+
+p strong {
+  font-weight: $fontWeightBold;
 }
 
 ul, ol{
@@ -58,13 +62,6 @@ blockquote {
 
 .typography-statement-wrapper {
   max-width: 66%;
-
-  h2 {
-    font-size: rem(42);
-    line-height: rem(55);
-    margin-bottom: rem(32);
-  }
-
   @media ($mediaDownSm) {
     max-width: 100%;
   }
@@ -87,7 +84,27 @@ hr {
   padding: rem(20);
 }
 
+.page-callout-blue {
+  background-color: $blue1;
+  border-radius: rem(16);
+  font-weight: $fontWeightMedium;
+  margin-bottom: rem(20);
+  padding: rem(20);
+}
+
 .wp-block-image figcaption {
   font-size: rem(14);
   text-align: center;
+}
+
+h2 {
+  font-size: rem(28);
+  line-height: rem(38);
+  margin-bottom: rem(24);
+
+  @media ($mediaUpMd) {
+    font-size: rem(42);
+    line-height: rem(55);
+    margin-bottom: rem(32);
+  }
 }
