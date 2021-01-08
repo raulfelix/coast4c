@@ -7,10 +7,6 @@
     margin-bottom: rem(32);
   }
 
-  p {
-    font-size: rem(18);
-  }
-
   .page-hero-container,
   .wp-block-group__inner-container {
     max-width: $maxWidth;
@@ -30,5 +26,24 @@
         width: 100%;
       }
     }
+  }
+}
+
+.page {
+  .page-container {
+    background-image: url('../images/title-blob.png');
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+    background-position: left;
+    margin-bottom: 80px;
+
+    max-width: $maxWidth;
+    margin: auto;
+    padding: rem(100) rem(40) rem(40) rem(40);
+  }
+
+  .page-title {
+    font-size: 46px;
+    font-weight: $fontWeightMedium;
   }
 }

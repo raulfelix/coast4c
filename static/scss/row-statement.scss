@@ -13,9 +13,14 @@
 
   p {
     color: $white;
-    font-size: rem(32);
-    line-height: rem(45);
+    font-size: rem(28);
+    line-height: rem(40);
     font-weight: $fontWeightMedium;
+
+    @media ($mediaUpMd) {
+      font-size: rem(32);
+      line-height: rem(45);
+    }
   }
 
 
