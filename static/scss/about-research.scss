@@ -10,8 +10,13 @@
   }
 
   .about-research-posts {
-    .blog-post-tiles {
-      flex-basis: 33.333%;
+    .research-post-tile {
+      @media ($mediaUpMd) {
+        flex-basis: 50%;
+      }
+      @media ($mediaUpLg) {
+        flex-basis: 33.333%;
+      }
     }
   }
 }
