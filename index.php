@@ -27,6 +27,7 @@
 
   var splide = $('.splide__list');
   splide.parent().addClass('splide__track').parent().addClass('splide');
+  splide.children().addClass('splide__slide');
   document.addEventListener( 'DOMContentLoaded', function () {
 		new Splide('.splide', {
       type   : 'slide',
