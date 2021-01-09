@@ -158,18 +158,19 @@ body {
       bottom: 0;
       left: 0;
       right: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       z-index: 10000;
       overflow: scroll;
+      padding-bottom: rem(60);
       -webkit-overflow-scrolling: touch;
-
       opacity: 0;
       visibility: hidden;
 
+      transition: transform 300ms cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
+      transform: translate3d(-100%, 0, 0);
+
       .menu {
         flex-direction: column;
+        padding: rem(80) rem(24) rem(24) rem(24);
 
         .menu-item {
           display: block;
@@ -188,7 +189,7 @@ body {
           top: auto;
 
           a {
-            font-size: 20px;
+            font-size: rem(20);
           }
         }
 
@@ -196,6 +197,7 @@ body {
           display: block;
           font-size: 20px;
           font-weight: normal;
+          margin-bottom: rem(8);
         }
       }
     }
@@ -204,11 +206,14 @@ body {
   .nav-mobile-active {
     overflow: hidden;
     position: fixed;
+    left: 0;
+    right: 0;
   }
 
   .nav-mobile-active .header .header-big-nav {
     opacity: 1;
     visibility: visible;
+    transform: translate3d(0, 0, 0);
   }
 }
 
