@@ -1,14 +1,7 @@
 .track-record {
-  padding: rem(60) rem(40);
-
-  @media ($mediaUpLg) {
-    padding: rem(100) rem(40);
-  }
+  @extend %grid-padding;
 
   .wp-block-group__inner-container {
-    max-width: $maxWidth;
-    margin: auto;
-
     .wp-block-column:first-child {
       padding-right: rem(40);
     }

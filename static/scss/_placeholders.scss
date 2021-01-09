@@ -39,3 +39,22 @@
   font-family: 'Verdana', Arial;
   font-weight: bold;
 }
+
+
+%grid-padding {
+  padding: rem(60) rem(24) rem(40) rem(24);
+
+  @media ($mediaUpMd) {
+    padding: rem(100) rem(40) rem(40) rem(40);
+  }
+
+  .wp-block-group__inner-container {
+    margin: auto;
+    max-width: $maxWidth;
+  }
+}
+
+%grid-max {
+  margin: auto;
+  max-width: $maxWidth;
+}

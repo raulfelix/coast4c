@@ -1,9 +1,5 @@
 .about-problem {
-  padding: rem(100) rem(40);
-
-  p {
-    font-size: rem(18);
-  }
+  @extend %grid-padding;
 
   .about-problem-items {
     background-color: #F9F9F9;
@@ -37,10 +33,5 @@
         width: auto !important;
       }
     }
-  }
-
-  .wp-block-group__inner-container {
-    margin: auto;
-    max-width: $maxWidth;
   }
 }

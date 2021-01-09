@@ -1,11 +1,6 @@
 .card-icons {
   text-align: center;
-  padding: rem(100) rem(40);
-
-  .wp-block-group__inner-container {
-    max-width: $maxWidth;
-    margin: auto;
-  }
+  @extend %grid-padding;
 
   .wp-block-column {
     max-width: rem(320);

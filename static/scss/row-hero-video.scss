@@ -1,6 +1,6 @@
 .hero-video {
   background-color: $yellow1;
-  padding: rem(100) rem(40);
+  @extend %grid-padding;
 
   .wp-block-group__inner-container {
     max-width: $maxWidth;

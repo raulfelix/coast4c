@@ -1,16 +1,15 @@
 .about-research {
-  padding: rem(40) rem(40) 0 rem(40);
+  padding: rem(40) rem(24) 0 rem(24);
+  @media ($mediaUpMd) {
+    padding: rem(40) rem(40) 0 rem(40);
+  }
 
   .about-research-posts,
   .wp-block-group__inner-container {
-    margin: auto;
-    max-width: $maxWidth;
+    @extend %grid-max;
   }
 
   .about-research-posts {
-    margin: auto;
-    max-width: $maxWidth;
-
     .blog-post-tiles {
       flex-basis: 33.333%;
     }

@@ -1,10 +1,5 @@
 .recognition {
-  padding: rem(60) rem(40);
-
-  .wp-block-group__inner-container {
-    max-width: $maxWidth;
-    margin: auto;
-  }
+  @extend %grid-padding;
 
   @media ($mediaDownMd) {
     .wp-block-columns {

@@ -1,32 +1,18 @@
 .row-information {
-  padding: rem(40) rem(40) rem(100) rem(40);
-
-  .wp-block-group__inner-container {
-    margin: auto;
-    max-width: $maxWidth;
-  }
+  @extend %grid-padding;
 }
 
 .row-blob {
-  background-image: url('../images/purple-blob.png');
+  background-image: url('../images/people_yellow_bg.png');
   background-repeat: no-repeat;
   background-size: 150% auto;
-  background-position: center 5%;
-  margin-bottom: 80px;
+  background-position: 0 top;
 
   @media ($mediaUpMd) {
-    background-size: 95% auto;
-    background-position: center;
+    background-size: 800px auto;
+    background-position: 100% center;
   }
 
-  @media ($mediaUpLg) {
-    background-size: 90% auto;
-    background-position: center;
-  }
-
-  @media ($mediaUpXl) {
-    background-size: 80% auto;
-  }
 
   .wp-block-column {
     background-color: $white;
@@ -36,7 +22,7 @@
     margin-bottom: rem(20);
 
     h2 {
-      background-color: #F9F0FF;
+      background-color: $yellow1;
       border-radius: 32px;
       display: inline-block;
       font-size: 14px;

@@ -11,16 +11,24 @@
   .blog-post-tile-when {
     padding: 0 rem(12);
     position: absolute;
-    top: 16px;
-    right: 28px;
-    width: auto;
     height: 34px;
+    top: 16px;
+    right: 16px;
+    width: auto;
+
+    @media ($mediaUpMd) {
+      right: 28px;
+    }
   }
 
   .blog-post-category {
     position: absolute;
-    left: 28px;
+    left: 16px;
     top: 16px;
+
+    @media ($mediaUpMd) {
+      left: 28px;
+    }
   }
 
   .blog-post-tile-image {

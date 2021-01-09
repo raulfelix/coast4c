@@ -191,8 +191,12 @@
 .blog-post-tiles {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -12px;
-  margin-right: -12px;
+  
+  @media ($mediaUpMd) {
+    margin-left: -12px;
+    margin-right: -12px;
+  }
+
 }
 
 .blog-post-side {
@@ -207,7 +211,7 @@
     margin-bottom: rem(20);
     strong {
       color: $yellow5;
-      font-weight: $fontWeightMedium;
+      font-weight: $fontWeightBold;
     }
   }
 

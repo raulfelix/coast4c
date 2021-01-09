@@ -3,14 +3,14 @@
 // ------------------------------------------------
 
 .grid {
-  padding: rem(40) rem(20) rem(100) rem(20);
+  // padding: rem(40) rem(20) rem(100) rem(20);
   margin: auto;
   max-width: $maxWidth;
 
-
-  @media ($mediaUpMd) {
-    padding: rem(40) rem(40) rem(100) rem(40);
-  }
+  @extend %grid-padding;
+  // @media ($mediaUpMd) {
+  //   padding: rem(40) rem(40) rem(100) rem(40);
+  // }
 }
 
 .f-grid,

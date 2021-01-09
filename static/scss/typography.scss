@@ -68,7 +68,10 @@ blockquote {
 }
 
 .page-title {
-  margin-bottom: rem(60);
+  margin-bottom: rem(30);
+  @media ($mediaUpMd) {
+    margin-bottom: rem(60);
+  }
 }
 
 hr {

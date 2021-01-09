@@ -7,10 +7,11 @@ Version: 1.0
 */
 
 @import 'colours';
+@import 'breakpoints';
 @import 'placeholders';
 @import 'reset';
-@import 'breakpoints';
 @import 'typography';
+@import 'grid';
 @import 'buttons';
 @import 'row-hero-video';
 @import 'row-card-icons';
@@ -22,7 +23,6 @@ Version: 1.0
 @import 'row-find-out-more';
 @import 'slider';
 @import 'icons';
-@import 'grid';
 @import 'form';
 @import 'spinner';
 @import 'header';
