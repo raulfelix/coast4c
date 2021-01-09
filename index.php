@@ -17,11 +17,30 @@
   get_footer(); 
 ?>
 
+<script src="<?php echo get_template_directory_uri(); ?>/static/vendor/splide.min.js"></script>
+
 <script type="text/javascript">
   $('.coast-video-overlay').click(function() {
-    // var myVideo = document.getElementById("hero-video"); 
-    // myVideo.play(); 
     $(this).css('display', 'none').next().css('opacity', '1');
     $("iframe")[0].src += "&autoplay=1";
   });
+
+  var splide = $('.splide__list');
+  splide.parent().addClass('splide__track').parent().addClass('splide');
+  document.addEventListener( 'DOMContentLoaded', function () {
+		new Splide('.splide', {
+      type   : 'slide',
+	    perPage: 3,
+	    perMove: 1,
+      breakpoints: {
+        900: {
+          perPage: 2
+        },
+        680: {
+          perPage: 1,
+        },
+      }
+    }).mount();
+	});
+
 </script>

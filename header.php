@@ -13,6 +13,8 @@
   <title><?php wp_title(''); ?></title>
   <?php $uri = get_template_directory_uri(); ?>
   <link rel="icon" type="image/png" sizes="96x96" href="<?php echo get_template_directory_uri(); ?>/static/images/favicon-96x96.png">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/static/vendor/splide.min.css">
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <?php if ( is_single() ): ?>
@@ -24,6 +26,16 @@
   <?php endif; ?>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YE8VMGSRB5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-YE8VMGSRB5');
+  </script>
 
   <?php wp_head(); ?>
 </head>

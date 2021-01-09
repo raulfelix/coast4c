@@ -1,26 +1,74 @@
 .reach-impact {
-  background-color: $yellow1;
+  background-color: $white;
   @extend %grid-padding;
 
   .wp-block-column {
-    flex-basis: 100%;
+    flex-basis: auto !important;
+    margin: 0 !important;
+    padding: 0 rem(16);
   }
 
   h2 {
     margin-bottom: 0;
   }
+
+  .splide.is-active .splide__list {
+    flex-wrap: nowrap;
+  }
+
+  .splide__arrow {
+    display: none;
+    height: 32px;
+    width: 32px;
+
+    @media ($mediaUpXl) {
+      display: flex;
+    }
+
+    svg {
+      fill: #000;
+    }
+  }
+
+  .splide__arrow:disabled {
+    background-color: $yellow2;
+    opacity: 0.4;
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+  .splide__arrow--prev {
+    background-color: $blue4;
+    left: rem(-42);
+  }
+  .splide__arrow--next {
+    background-color: $blue4;
+    right: rem(-42);
+  }
+
+  .splide__pagination {
+    bottom: rem(-40);
+    .splide__pagination__page {
+      &.is-active {
+        background-color: $blue5;
+      }
+    }
+  }
 }
 
 .card-statistic {
   background-color: $blue2;
-  border-radius: 16px;
-  margin-bottom: rem(32);
+  border-radius: rem(16);
   overflow: hidden;
   position: relative;
+  height: 100%;
 
   .wp-block-image {
     overflow: hidden;
     margin-bottom: 0;
+    height: 200px;
+    display: flex;
+    align-items: center;
   }
 
   .wp-block-image + .wp-block-group {
@@ -37,14 +85,16 @@
       font-size: rem(60);
       font-weight: $fontWeightSemiBold;
       margin-bottom: 0;
-      line-height: rem(100);
+      line-height: rem(60);
 
       @media ($mediaUpLg) {
         font-size: rem(70);
+        line-height: rem(70);
       }
 
       @media ($mediaUpXl) {
-        font-size: rem(100);
+        font-size: rem(80);
+        line-height: rem(80);
       }
     }
 
