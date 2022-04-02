@@ -12,7 +12,7 @@
 				<div class="footer-description">
 					<p><?php echo get_option( 'blogdescription' ) ?></p>
 					<div class="footer-legals">
-						<span>&copy;2020 by COAST 4C Limited - ABN 92 641 553 82</span>
+						<span>&copy;2020 by COAST 4C Limited - ABN 92 641 553 826</span>
 					</div>
 				</div>
 			</div>
@@ -44,8 +44,9 @@
 					<h3 class="footer-block-title">Follow us</h3>
 					<div>
 						<a href="https://www.facebook.com/coast4c" target="_blank" class="icon-facebook"></a>
-						<a href="https://www.instagram.com/coast4c/" target="_blank" class="icon-instagram"></a>
+						<a href="https://www.linkedin.com/company/coast4c/" target="_blank" class="icon-linkedin"></a>
 						<a href="https://twitter.com/coast4c" target="_blank" class="icon-twitter"></a>
+						<a href="https://www.instagram.com/coast4c/" target="_blank" class="icon-instagram"></a>
 					</div>
 				</div>
 			</div>
